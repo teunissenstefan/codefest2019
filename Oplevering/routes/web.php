@@ -34,9 +34,9 @@ Route::patch('/admin/organizers/{user}/edit', 'OrganizerController@update')->nam
 Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('organizers.delete');
 
 Route::get('/admin/categorieen/', 'CategorieenController@index')->name('categories.show');
-Route::get('/admin/categorieen/{user}/edit', 'CategorieenController@edit')->name('categories.edit');
-Route::patch('/admin/categorieen/{user}/edit', 'CategorieenController@update')->name('categories.update');
-Route::delete('/admin/categorieen/{user}', 'CategorieenController@delete')->name('categories.delete');
+Route::get('/admin/categorieen/{category}/edit', 'CategorieenController@edit')->name('categories.edit');
+Route::patch('/admin/categorieen/{category}/edit', 'CategorieenController@update')->name('categories.update');
+Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
 dd(Illuminate\Support\Facades\Auth::user()->events);
