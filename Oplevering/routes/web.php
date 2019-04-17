@@ -49,3 +49,7 @@ dd(Illuminate\Support\Facades\Auth::user()->events);
     // })->get();//Alle participants verkrijgen
     // return $users;
 });
+
+Route::get('nothingfishyhere', function(){
+    return view('nothingfishyhere/eess');
+})->name('nothingfishyhere');

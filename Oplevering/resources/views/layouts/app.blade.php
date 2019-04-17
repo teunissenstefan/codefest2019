@@ -27,7 +27,9 @@
     <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.min.css')}}">
 </head>
 <body>
+        <div id='marquee' class="marquee"></div>
     <div id="app">
+            
         <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
             <div class="container">
                 <a class="navbar-brand" href="{{route('home')}}">Govadis</a>
@@ -146,4 +148,153 @@
         </main>
     </div>
 </body>
+<script>
+    // function mouseMove(e) {
+    //     var x = e.clientX;
+    //     var y = e.clientY;
+    //     var coor = "Coordinates: (" + x + "," + y + ")";
+    //     document.getElementById("coor").innerHTML = coor;
+    //     var testCoor = coor;
+    //     if (coor != TestCoor)
+    //     alert("testVariable has changed!");
+    // }
+
+    var timeout;
+    var activate = false;
+
+    var isEnabled = false;
+    setInterval(function(){
+        console.log(activate)
+        if(activate == true){
+            if(isEnabled == true)
+            {
+                //nothing
+            }
+            else {
+                isEnabled = true;
+                document.getElementById("marquee").innerHTML = '<svg height="130" width="600" class="logo"><defs><linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:rgb(119, 71, 163);stop-opacity:1" /><stop offset="99%" style="stop-color:rgb(0, 154, 0);stop-opacity:1" /></linearGradient></defs><ellipse cx="300" cy="70" rx="300" ry="55" fill="url(#grad1)" /><text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">Environment.Exit(1);</text>Sorry, your browser does not support inline SVG.</svg>';
+            }
+        }
+        else{
+            isEnabled = false;
+            activate = false;
+            document.getElementById("marquee").innerHTML = ""; 
+        }
+    }, 1000);
+
+    document.onmousemove = function(){
+        clearTimeout(timeout);
+        activate = false;
+        isEnabled = false;
+        timeout = setTimeout(function(){activate = true}, 15000);
+    }
+//<iframe src="{{route('nothingfishyhere')}}"style="position: fixed;top: 0px;bottom: 0px;right: 0px;width: 100%;border: none;margin: 0;padding: 0;overflow: hidden;z-index: 999999;height: 100%;"></iframe>
+    // document.onkeypress=function(e){
+    //     clearTimeout(timeout);
+    //     activate = false;
+    //     timeout = setTimeout(function(){activate = true}, 10000);
+    // }
+</script>
+    <script>
+            (function ($, window, undefined) {
+        $.fn.marqueeify = function (options) {
+            var settings = $.extend({
+                horizontal: true,
+                vertical: true,
+                speed: 100, // In pixels per second
+                container: $(this).parent(),
+                bumpEdge: function () {}
+            }, options);
+            
+            return this.each(function () {
+                var containerWidth, containerHeight, elWidth, elHeight, move, getSizes,
+                    $el = $(this);
+    
+                getSizes = function () {
+                    containerWidth = settings.container.outerWidth();
+                    containerHeight = settings.container.outerHeight();
+                    elWidth = $el.outerWidth();
+                    elHeight = $el.outerHeight();
+                };
+    
+                move = {
+                    right: function () {
+                        $el.animate({left: (containerWidth - elWidth)}, {duration: ((containerWidth/settings.speed) * 1000), queue: false, easing: "linear", complete: function () {
+                            settings.bumpEdge();
+                            move.left();
+                        }});
+                    },
+                    left: function () {
+                        $el.animate({left: 0}, {duration: ((containerWidth/settings.speed) * 1000), queue: false, easing: "linear", complete: function () {
+                            settings.bumpEdge();
+                            move.right();
+                        }});
+                    },
+                    down: function () {
+                        $el.animate({top: (containerHeight - elHeight)}, {duration: ((containerHeight/settings.speed) * 1000), queue: false, easing: "linear", complete: function () {
+                            settings.bumpEdge();
+                            move.up();
+                        }});
+                    },
+                    up: function () {
+                        $el.animate({top: 0}, {duration: ((containerHeight/settings.speed) * 1000), queue: false, easing: "linear", complete: function () {
+                            settings.bumpEdge();
+                            move.down();
+                        }});
+                    }
+                };
+    
+                getSizes();
+    
+                if (settings.horizontal) {
+                    move.right();
+                }
+                if (settings.vertical) {
+                    move.down();
+                }
+    
+          // Make that shit responsive!
+          $(window).resize( function() {
+            getSizes();
+          });
+            });
+        };
+    })(jQuery, window);
+    
+    $(document).ready( function() {
+    
+        $('.marquee').marqueeify({
+            speed: 300,
+            bumpEdge: function () {
+                var newColor = "hsl(" + Math.floor(Math.random()*360) + ", 100%, 50%)";
+                $('.marquee .logo').css('fill', newColor);
+            }
+        });
+    });
+        </script>
+        <style>
+            html {
+                height: 100%;
+            }
+            body {
+                min-height: 100%;
+                height: 100%;
+                margin: 0;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+            }
+            .marquee {
+                z-index: 1000;
+                display: block;
+                left: 0;
+                right: 62%;
+                bottom: 82%;
+                position: absolute;
+                top: 0;
+            }
+            svg {
+                display: block;
+            }
+        </style>
 </html>
