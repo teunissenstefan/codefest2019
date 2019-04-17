@@ -21,6 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('postal_code');
             $table->string('house_number');
             $table->string('street');
+            $table->string('city');
             $table->dateTime('birthdate');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
