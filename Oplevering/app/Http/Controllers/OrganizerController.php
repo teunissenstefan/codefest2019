@@ -10,6 +10,7 @@ namespace App\Http\Controllers;
 
 
 use App\User;
+use Illuminate\Http\Request;
 
 class OrganizerController extends Controller
 {
@@ -37,5 +38,30 @@ class OrganizerController extends Controller
             'organizers' => $organizers
         ];
         return view('admin.organizers.index')->with($data);
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function edit(User $user, Request $request)
+    {
+        $data = [
+            'organizer' => $user
+        ];
+        return view('admin.organizers.edit')->with($data);
+    }
+
+    /**
+     * Delete.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function delete(User $user, Request $request)
+    {
+        $user->delete();
+        $request->session()->flash('status', 'Organisator verwijderd!');
+        return redirect(route('organizers.show'));
     }
 }
