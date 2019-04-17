@@ -55,7 +55,7 @@
 
                         @if(Gate::check('admin_action') || Gate::check('organizer_action'))
                             <li class="nav-item">
-                                <a class="nav-link" href="{{route('addevent')}}">Voeg Event toe</a>
+                                <a class="nav-link" href="{{route('events.index')}}">Voeg Event toe</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('categories.show')}}">Categorieen</a>

@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
 Route::get('/event/{eventId}', 'EventsController@event')->name('event');
+Route::get('events/index', 'EventsController@index')->name('events.index');
 Route::get('/addevent', 'EventsController@addEvent')->name('addevent');
 Route::get('/eventedit/{eventId}', 'EventsController@eventEdit')->name('eventedit');
 Route::post('/addevent', 'EventsController@eventStore')->name('event.add');

@@ -33,6 +33,15 @@ class EventsController extends Controller
         return view("events/myevents", ["finishedEvents"=>$finishedEvents,"openEvents"=>$openEvents]);
     }
 
+    public function index()
+    {
+        $events = GoVadisEvent::all();
+        $data = [
+            'events' => $events
+        ];
+        return view('events.index')->with($data);
+    }
+
     public function events()
     {
         $events = GoVadisEvent::all();
