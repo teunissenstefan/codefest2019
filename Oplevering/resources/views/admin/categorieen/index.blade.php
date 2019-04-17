@@ -16,45 +16,33 @@
                             </div>
                         @endif
 
-                        <table id="organizersTable" class="table table-striped table-bordered table-responsive" style="width:100%">
+                        <table id="CategoriesTable" class="table table-striped table-bordered table-responsive" style="width:100%">
                             <thead>
                             <tr>
-                                <th>Naam</th>
-                                <th>Postcode</th>
-                                <th>Straat</th>
-                                <th>Huisnummer</th>
-                                <th>Geboortedatum</th>
-                                <th>E-mailadres</th>
-                                <th>Acties</th>
+                                <th>Categorie</th>
+                                <th>Bijnaam</th>
+                                <th>Bijnaam</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($organizers as $organizer)
+                            @foreach($categories as $category)
                                 <tr>
-                                    <td>{{$organizer->firstname}} {{$organizer->infix}} {{$organizer->lastname}}</td>
-                                    <td>{{$organizer->postal_code}}</td>
-                                    <td>{{$organizer->street}}</td>
-                                    <td>{{$organizer->house_number}}</td>
-                                    <td>{{\Carbon\Carbon::parse($organizer->birthdate)->format("Y")}}</td>
-                                    <td>{{$organizer->email}}</td>
+                                    <td>{{$category->category}}</td>
+                                    <td>{{$category->slug}}</td>
                                     <td>
-                                        {{Form::open(['method'  => 'DELETE', 'route' => ['organizers.delete', $organizer->id]])}}
+                                        {{Form::open(['method'  => 'DELETE', 'route' => ['categories.delete', $category->id]])}}
                                         <input type="submit" class="btn btn-sm btn-danger float-right" value="Verwijder"/>
                                         {{Form::close()}}
-                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('organizers.edit',$organizer->id)}}">Bewerk</a>
+                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('categories.edit',$category->id)}}">Bewerk</a>
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>Naam</th>
-                                <th>Postcode</th>
-                                <th>Straat</th>
-                                <th>Huisnummer</th>
-                                <th>Geboortedatum</th>
-                                <th>E-mailadres</th>
-                                <th>Acties</th>
+                                <th>Categorie</th>
+                                <th>Bijnaam</th>
+                                <th>Bijnaam</th>
                             </tr>
                             </tfoot>
                         </table>
@@ -65,7 +53,7 @@
     </div>
     <script>
         $(document).ready(function () {
-            $('#organizersTable').dataTable({
+            $('#CategoriesTable').dataTable({
                 responsive: true,
                 "language": {
                     "sProcessing": "Bezig...",

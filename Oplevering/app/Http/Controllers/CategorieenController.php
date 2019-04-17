@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Category;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -21,11 +22,9 @@ class CategorieenController extends Controller
 
     public function index()
     {
-        $categories = User::Wherehas('roles', function ($query) {
-            $query->where('slug', '=', 'organizer');
-        })->get();
+        $categories = Category::all();
         $data = [
-            'organizers' => $categories
+            'categories' => $categories
         ];
         return view('admin.categorieen.index')->with($data);
     }
@@ -33,7 +32,7 @@ class CategorieenController extends Controller
     public function edit(User $user, Request $request)
     {
         $data = [
-            'organizer' => $user
+            'category' => $user
         ];
         return view('admin.categorieen.edit')->with($data);
     }
@@ -43,7 +42,7 @@ class CategorieenController extends Controller
         $user->fill($request->all());
         $user->save();
         $data = [
-            'organizer' => $user
+            'category' => $user
         ];
         $request->session()->flash('status', 'Categorieen aangepast!');
         return redirect(route('categorieen.show'));
