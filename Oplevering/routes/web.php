@@ -34,6 +34,8 @@ Route::get('/admin/organizers/', 'OrganizerController@index')->name('organizers.
 Route::get('/admin/organizers/{user}/edit', 'OrganizerController@edit')->name('organizers.edit');
 Route::patch('/admin/organizers/{user}/edit', 'OrganizerController@update')->name('organizers.update');
 Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('organizers.delete');
+Route::delete('/admin/organizers/{user}/deny', 'OrganizerController@deny')->name('organizers.deny');
+Route::get('/admin/organizers/{user}/accept', 'OrganizerController@accept')->name('organizers.accept');
 
 Route::get('/admin/categorieen/', 'CategorieenController@index')->name('categories.show');
 Route::get('/admin/categorieen/{category}/edit', 'CategorieenController@edit')->name('categories.edit');
@@ -41,7 +43,12 @@ Route::patch('/admin/categorieen/{category}/edit', 'CategorieenController@update
 Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
-    dd(\Illuminate\Support\Facades\Auth::user()->favorite_category);
+//    $organizers = \App\User::whereHas('roles', function ($query) {
+//        $query->where('slug', '=', 'organizer');
+//    })->whereHas('company', function ($query) {
+//        $query->where('accepted', '=', '0');
+//    })->get();
+//    return $organizers;
 //dd(Illuminate\Support\Facades\Auth::user()->events);
 
 //    echo Auth::user()->can("participant_action")?"ja":"nee";
