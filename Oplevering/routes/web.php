@@ -19,6 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/events', 'EventsController@index')->name('events');
+
 Route::get('/admin/organizers/', 'OrganizerController@index')->name('home');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {

@@ -17,7 +17,7 @@
                         <table id="organizersTable" class="display" style="width:100%">
                             <thead>
                             <tr>
-                                <th>Name</th>
+                                <th>Naam</th>
                                 <th>Position</th>
                                 <th>Office</th>
                                 <th>Age</th>
@@ -28,8 +28,8 @@
                             <tbody>
                             @foreach($organizers as $organizer)
                                 <tr>
-                                    <td>{{$organizer->firstname}}</td>
-                                    <td>System Architect</td>
+                                    <td>{{$organizer->firstname}} {{$organizer->infix}} {{$organizer->lastname}}</td>
+                                    <td>{{}}</td>
                                     <td>Edinburgh</td>
                                     <td>61</td>
                                     <td>2011/04/25</td>
