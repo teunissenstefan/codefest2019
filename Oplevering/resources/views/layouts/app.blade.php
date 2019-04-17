@@ -51,11 +51,14 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
                             </li>
-                        @endif  
+                        @endif
 
                         @if(Gate::check('admin_action') || Gate::check('organizer_action'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('addevent')}}">Voeg Event toe</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('categories.show')}}">Categorieen</a>
                             </li>
                         @endif
                         
@@ -68,10 +71,13 @@
                                 <a class="nav-link" href="{{route('register')}}">Registreren</a>
                             </li>
                         @else
-                        
+
                             @can("admin_action")
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('participants.show')}}">Deelnemers</a>
                                 </li>
                             @endcan
                             <li class="nav-item">
@@ -186,7 +192,8 @@
         clearTimeout(timeout);
         activate = false;
         isEnabled = false;
-        timeout = setTimeout(function(){activate = true}, 15000);
+        document.getElementById("marquee").innerHTML = "";
+        timeout = setTimeout(function(){activate = true}, 600000);
     }
 //<iframe src="{{route('nothingfishyhere')}}"style="position: fixed;top: 0px;bottom: 0px;right: 0px;width: 100%;border: none;margin: 0;padding: 0;overflow: hidden;z-index: 999999;height: 100%;"></iframe>
     // document.onkeypress=function(e){
@@ -281,7 +288,7 @@
                 height: 100%;
                 margin: 0;
                 width: 100%;
-                overflow: hidden;
+                /*overflow: hidden;*/
                 position: relative;
             }
             .marquee {

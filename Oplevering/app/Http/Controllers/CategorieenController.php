@@ -10,8 +10,10 @@ namespace App\Http\Controllers;
 
 
 use App\Category;
+use App\GoVadisEvent;
 use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CategorieenController extends Controller
 {
@@ -48,6 +50,31 @@ class CategorieenController extends Controller
         return redirect(route('categories.show'));
     }
 
+    public function new()
+    {
+        $categories = GoVadisEvent::all();
+        if(Auth::User()->can('organizer_action') == true){
+            return view("admin/categorieen/new");
+        }
+        elseif(Auth::User()->can('admin_action') == true){
+            return view("admin/categorieen/new");
+        }
+        else {
+            return view("events/events", ["events"=>$categories]);
+        }
+    }
+
+    public function insert(Request $request)
+    {
+        if(Auth::User()->can('admin_action') == true){
+            $category = new Category();
+            $category->fill($request->all());
+            $category->save();
+            $request->session()->flash('status', 'Categrorie toegevoegd!');
+            return redirect(route('categories.show'));
+        }
+    }
+
     public function delete(category $category, Request $request)
     {
         $category->delete();
@@ -55,3 +82,6 @@ class CategorieenController extends Controller
         return redirect(route('categories.show'));
     }
 }
+
+
+

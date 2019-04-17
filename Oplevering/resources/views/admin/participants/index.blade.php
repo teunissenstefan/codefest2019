@@ -5,8 +5,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Categorieen Beheren
-                        <a class="btn btn-sm btn-success float-right" href="{{route('categories.new')}}">Toevoegen</a></div>
+                    <div class="card-header">Deelnemers Beheren
+                        {{--<a class="btn btn-sm btn-success float-right" href="#">Toevoegen</a>--}}
+                    </div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -15,33 +16,45 @@
                             </div>
                         @endif
 
-                        <table id="CategoriesTable" class="table table-striped table-bordered table-responsive" style="width:100%">
+                        <table id="participantsTable" class="table table-striped table-bordered table-responsive" style="width:100%">
                             <thead>
                             <tr>
-                                <th>Categorie</th>
-                                <th>Bijnaam</th>
-                                <th>Bijnaam</th>
+                                <th>Naam</th>
+                                <th>Postcode</th>
+                                <th>Straat</th>
+                                <th>Huisnummer</th>
+                                <th>Geboortedatum</th>
+                                <th>E-mailadres</th>
+                                <th>Acties</th>
                             </tr>
                             </thead>
                             <tbody>
-                            @foreach($categories as $category)
+                            @foreach($participants as $participant)
                                 <tr>
-                                    <td>{{$category->category}}</td>
-                                    <td>{{$category->slug}}</td>
+                                    <td>{{$participant->firstname}} {{$participant->infix}} {{$participant->lastname}}</td>
+                                    <td>{{$participant->postal_code}}</td>
+                                    <td>{{$participant->street}}</td>
+                                    <td>{{$participant->house_number}}</td>
+                                    <td>{{\Carbon\Carbon::parse($participant->birthdate)->format("Y-m-d")}}</td>
+                                    <td>{{$participant->email}}</td>
                                     <td>
-                                        {{Form::open(['method'  => 'DELETE', 'route' => ['categories.delete', $category->id]])}}
+                                        {{Form::open(['method'  => 'DELETE', 'route' => ['participants.delete', $participant->id]])}}
                                         <input type="submit" class="btn btn-sm btn-danger float-right" value="Verwijder"/>
                                         {{Form::close()}}
-                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('categories.edit',$category->id)}}">Bewerk</a>
+                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('participants.edit',$participant->id)}}">Bewerk</a>
                                     </td>
                                 </tr>
                             @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>Categorie</th>
-                                <th>Bijnaam</th>
-                                <th>Bijnaam</th>
+                                <th>Naam</th>
+                                <th>Postcode</th>
+                                <th>Straat</th>
+                                <th>Huisnummer</th>
+                                <th>Geboortedatum</th>
+                                <th>E-mailadres</th>
+                                <th>Acties</th>
                             </tr>
                             </tfoot>
                         </table>
@@ -52,7 +65,7 @@
     </div>
     <script>
         $(document).ready(function () {
-            $('#CategoriesTable').dataTable({
+            $('#participantsTable').dataTable({
                 responsive: true,
                 "language": {
                     "sProcessing": "Bezig...",

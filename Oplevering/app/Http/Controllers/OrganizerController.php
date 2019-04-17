@@ -17,15 +17,26 @@ class OrganizerController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
+        $this->middleware('can:admin_action');
     }
 
     public function index()
     {
         $organizers = User::whereHas('roles', function ($query) {
             $query->where('slug', '=', 'organizer');
+        })->whereHas('company', function ($query) {
+            $query->where('accepted', '=', '1');
+        })->get();
+
+        $unaccepted_organizers = User::whereHas('roles', function ($query) {
+            $query->where('slug', '=', 'organizer');
+        })->whereHas('company', function ($query) {
+            $query->where('accepted', '=', '0');
+
         })->get();
         $data = [
-            'organizers' => $organizers
+            'organizers' => $organizers,
+            'unaccepted_organizers' => $unaccepted_organizers
         ];
         return view('admin.organizers.index')->with($data);
     }
@@ -53,6 +64,22 @@ class OrganizerController extends Controller
     {
         $user->delete();
         $request->session()->flash('status', 'Organisator verwijderd!');
+        return redirect(route('organizers.show'));
+    }
+
+    public function accept(User $user, Request $request)
+    {
+        $user->company->accepted = 1;
+        $user->company->save();
+        $request->session()->flash('status', 'Aanmelding geaccepteerd!');
+        return redirect(route('organizers.show'));
+    }
+
+    public function deny(User $user, Request $request)
+    {
+        $user->company->delete();
+        $user->delete();
+        $request->session()->flash('status', 'Aanmelding afgewezen!');
         return redirect(route('organizers.show'));
     }
 }
