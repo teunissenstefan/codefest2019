@@ -12,42 +12,87 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
-                        <form>
+                            {{Form::model($user, array('route' => array('profile.update', $user->id)))}}
+                            @method('PATCH')
+                            @csrf
                             <div class="row">
-                                <div class="form-group col-4">
-                                    <label for="firstname">Voornaam</label>
-                                    <input type="text" class="form-control" id="firstname" aria-describedby="emailHelp" placeholder="Voornaam">
+                                <div class="col-md-5">
+                                    {{ Form::label('firstname', 'Voornaam:') }}
+                                    {{ Form::text('firstname', null, array('class' => 'form-control '.($errors->has('firstname') ? ' is-invalid' : ''),'required','autofocus')) }}
+                                    @if ($errors->has('firstname'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('firstname') }}</strong>
+                                        </small>
+                                    @endif
                                 </div>
-                                <div class="form-group col-2">
-                                    <label for="infix">Tussenvoegsel</label>
-                                    <input type="text" class="form-control" id="infix" placeholder="Tussenvoegsel">
+                                <div class="col-md-2">
+                                    {{ Form::label('infix', 'Tussenvoegsel:') }}
+                                    {{ Form::text('infix', null, array('class' => 'form-control '.($errors->has('infix') ? ' is-invalid' : ''))) }}
+                                    @if ($errors->has('infix'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('infix') }}</strong>
+                                        </small>
+                                    @endif
                                 </div>
-                                <div class="form-group col-6">
-                                    <label for="lastname">Achternaam</label>
-                                    <input type="text" class="form-control" id="lastname" placeholder="Achternaam">
+                                <div class="col-md-5">
+                                    {{ Form::label('lastname', 'Achternaam:') }}
+                                    {{ Form::text('lastname', null, array('class' => 'form-control '.($errors->has('lastname') ? ' is-invalid' : ''))) }}
+                                    @if ($errors->has('lastname'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('lastname') }}</strong>
+                                        </small>
+                                    @endif
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="form-group col-6">
-                                    <label for="postalcode">Postcode</label>
-                                    <input type="text" class="form-control" id="postalcode" aria-describedby="emailHelp" placeholder="Postcode">
+                                <div class="col-md-3">
+                                    {{ Form::label('birthdate', 'Geboortedatum:') }}
+                                    {{ Form::text('birthdate', null, array('class' => 'form-control '.($errors->has('birthdate') ? ' is-invalid' : ''))) }}
+                                    @if ($errors->has('birthdate'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('birthdate') }}</strong>
+                                        </small>
+                                    @endif
                                 </div>
-                                <div class="form-group col-6">
-                                    <label for="number">Huisnummer</label>
-                                    <input type="text" class="form-control" id="number" placeholder="Huisnummer">
+                                <div class="col-md-3">
+                                    {{ Form::label('postal_code', 'Postcode:') }}
+                                    {{ Form::text('postal_code', null, array('class' => 'form-control '.($errors->has('postal_code') ? ' is-invalid' : ''))) }}
+                                    @if ($errors->has('postal_code'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('postal_code') }}</strong>
+                                        </small>
+                                    @endif
+                                </div>
+                                <div class="col-md-6">
+                                    {{ Form::label('house_number', 'Huisnummer:') }}
+                                    {{ Form::text('house_number', null, array('class' => 'form-control '.($errors->has('house_number') ? ' is-invalid' : ''))) }}
+                                    @if ($errors->has('house_number'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('house_number') }}</strong>
+                                        </small>
+                                    @endif
                                 </div>
                             </div>
 
                             <div class="row">
-                                <div class="form-group col-6">
-                                    <label for="residence">Woonplaats</label>
-                                    <input type="text" class="form-control" id="residence" aria-describedby="emailHelp" placeholder="Woonplaats">
+                                <div class="col-md-6">
+                                    {{ Form::label('city', 'Woonplaats:') }}
+                                    {{ Form::text('city', null, array('class' => 'form-control '.($errors->has('city') ? ' is-invalid' : ''))) }}
+                                    @if ($errors->has('city'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('city') }}</strong>
+                                        </small>
+                                    @endif
                                 </div>
-                                <div class="form-group col-6">
-                                    <label for="street">Straat</label>
-                                    <input type="text" class="form-control" id="street" placeholder="Straat">
+                                <div class="col-md-6">
+                                    {{ Form::label('street', 'Straat:') }}
+                                    {{ Form::text('street', null, array('class' => 'form-control '.($errors->has('street') ? ' is-invalid' : ''))) }}
+                                    @if ($errors->has('street'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('street') }}</strong>
+                                        </small>
+                                    @endif
                                 </div>
                             </div>
 
@@ -62,13 +107,18 @@
                                         <option value="5">Thomas</option>
                                     </select>
                                 </div>
-                                <div class="form-group col-6">
-                                    <label for="email">E-mailadres</label>
-                                    <input type="email" class="form-control" id="email" placeholder="E-mailadres">
+                                <div class="col-md-6">
+                                    {{ Form::label('email', 'E-mailadres:') }}
+                                    {{ Form::text('email', null, array('class' => 'form-control '.($errors->has('email') ? ' is-invalid' : ''))) }}
+                                    @if ($errors->has('email'))
+                                        <small class="text-danger" role="alert">
+                                            <strong>{{ $errors->first('email') }}</strong>
+                                        </small>
+                                    @endif
                                 </div>
                             </div>
                             <button type="submit" class="btn btn-primary">Opslaan</button>
-                        </form>
+                            {{Form::close()}}
 
                     </div>
                 </div>

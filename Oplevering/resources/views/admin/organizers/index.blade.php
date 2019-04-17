@@ -5,8 +5,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Organisatoren Beheren <a class="btn btn-sm btn-success float-right"
-                                                                      href="#">Toevoegen</a></div>
+                    <div class="card-header">Organisatoren Beheren
+                        {{--<a class="btn btn-sm btn-success float-right" href="#">Toevoegen</a>--}}
+                    </div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -15,7 +16,7 @@
                             </div>
                         @endif
 
-                        <table id="organizersTable" class="table table-striped table-bordered" style="width:100%">
+                        <table id="organizersTable" class="table table-striped table-bordered table-responsive" style="width:100%">
                             <thead>
                             <tr>
                                 <th>Naam</th>
@@ -40,7 +41,7 @@
                                         {{Form::open(['method'  => 'DELETE', 'route' => ['organizers.delete', $organizer->id]])}}
                                         <input type="submit" class="btn btn-sm btn-danger float-right" value="Verwijder"/>
                                         {{Form::close()}}
-                                        <a class="btn btn-sm btn-warning float-right mr-1" href="#">Bewerk</a>
+                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('organizers.edit',$organizer->id)}}">Bewerk</a>
                                     </td>
                                 </tr>
                             @endforeach
