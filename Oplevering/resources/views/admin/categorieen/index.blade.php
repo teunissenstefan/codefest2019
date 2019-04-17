@@ -6,8 +6,7 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">Categorieen Beheren
-                        {{--<a class="btn btn-sm btn-success float-right" href="#">Toevoegen</a>--}}
-                    </div>
+                        <a class="btn btn-sm btn-success float-right" href="{{route('categories.new')}}">Toevoegen</a></div>
 
                     <div class="card-body">
                         @if (session('status'))

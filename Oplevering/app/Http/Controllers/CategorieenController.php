@@ -48,6 +48,20 @@ class CategorieenController extends Controller
         return redirect(route('categories.show'));
     }
 
+    public function new()
+    {
+        $categories = GoVadisEvent::all();
+        if(Auth::User()->can('organizer_action') == true){
+            return view("events/addevent");
+        }
+        elseif(Auth::User()->can('admin_action') == true){
+            return view("events/addevent");
+        }
+        else {
+            return view("events/events", ["events"=>$categories]);
+        }
+    }
+
     public function delete(category $category, Request $request)
     {
         $category->delete();

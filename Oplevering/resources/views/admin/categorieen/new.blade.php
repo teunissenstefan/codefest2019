@@ -5,9 +5,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Categorie Bewerken <a class="btn btn-sm btn-success float-right"
+                    <div class="card-header">Categorie Toevoegen <a class="btn btn-sm btn-success float-right"
                                                                       href="{{url()->previous()}}">Terug</a></div>
-
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">

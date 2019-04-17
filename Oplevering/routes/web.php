@@ -38,6 +38,7 @@ Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('o
 Route::get('/admin/categorieen/', 'CategorieenController@index')->name('categories.show');
 Route::get('/admin/categorieen/{category}/edit', 'CategorieenController@edit')->name('categories.edit');
 Route::patch('/admin/categorieen/{category}/edit', 'CategorieenController@update')->name('categories.update');
+Route::get('/admin/categorieen/new', 'CategorieenController@new')->name('categories.new');
 Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
