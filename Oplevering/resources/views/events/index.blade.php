@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Categorieen Beheren
-                        <a class="btn btn-sm btn-success float-right" href="{{route('categories.new')}}">Toevoegen</a></div>
+                    <div class="card-header">Events Beheren
+                        <a class="btn btn-sm btn-success float-right" href="{{route('events.new')}}">Toevoegen</a></div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -22,7 +22,7 @@
                                 <th>Organizer</th>
                                 <th>Categorie</th>
                                 <th>Datum</th>
-                                <th>Bijnaam</th>
+                                <th>Locatie</th>
                                 <th>Knoppen</th>
                             </tr>
                             </thead>
@@ -33,7 +33,7 @@
                                     <td>{{$event->orginazor}}</td>
                                     <td>{{$event->category}}</td>
                                     <td>{{$event->date}}</td>
-                                    <td>{{$event->slug}}</td>
+                                    <td>{{$event->street}} {{$event->house_number}}</td>
                                     <td>
                                         {{Form::open(['method'  => 'DELETE', 'route' => ['categories.delete', $event->id]])}}
                                         <input type="submit" class="btn btn-sm btn-danger float-right" value="Verwijder"/>
@@ -49,7 +49,7 @@
                                 <th>Organezir</th>
                                 <th>Categorie</th>
                                 <th>Datum</th>
-                                <th>Bijnaam</th>
+                                <th>Locatie</th>
                                 <th>Knoppen</th>
                             </tr>
                             </tfoot>
