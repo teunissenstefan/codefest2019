@@ -37,8 +37,16 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <a class="nav-link" href="{{route('events')}}">Events</a>
-                        <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('events')}}">Events</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('profile')}}">Profiel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
+                        </li>
+                        
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('login')}}">Login</a>

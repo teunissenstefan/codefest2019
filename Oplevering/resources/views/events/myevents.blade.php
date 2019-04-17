@@ -34,7 +34,7 @@
                                     <td>@php echo $event['orginazor']; @endphp</td>
                                     <td>@php echo $event['category']; @endphp</td>
                                     <td>@php echo $event['date']; @endphp</td>
-                                    <td>test</td>
+                                    <td><a class="nav-link" href="{{route('event',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><img src="IMG/info.png" height="25px" width="25px"> Info   </button></a></td>
                                 </tr>
                             @endif
                         @endforeach
@@ -53,6 +53,7 @@
                         <th scope="col">Organizer</th>
                         <th scope="col">Categorie</th>
                         <th scope="col">Datum</th>
+                        <th scope="col">Punten, plaats</th>
                         <th scope="col"></th>
                       </tr>
                     </thead>
@@ -64,7 +65,8 @@
                                     <td>@php echo $event['orginazor']; @endphp</td>
                                     <td>@php echo $event['category']; @endphp</td>
                                     <td>@php echo $event['date']; @endphp</td>
-                                    <td>test</td>
+                                    <td>@php echo $event['place_points']; @endphp</td>
+                                    <td><a class="nav-link" href="{{route('event',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><img src="IMG/info.png" height="25px" width="25px"> Info   </button></a></td>
                                 </tr>
                             @endif
                         @endforeach
