@@ -106,8 +106,10 @@ class RegisterController extends Controller
                 'street' => $data['company']['street'],
                 'user_id' => $user->id,
             ]);
+            $user->roles()->attach(\App\Role::where('slug','organizer-pre-accept')->first());
+        }else{
+            $user->roles()->attach(\App\Role::where('slug',$data['role'])->first());
         }
-        $user->roles()->attach(\App\Role::where('slug',$data['role'])->first());
         return $user;
     }
 }

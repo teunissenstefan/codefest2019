@@ -21,7 +21,7 @@ class GoVadisEvent extends Model
 
     public function getUserAttribute()
     {
-        return $this->users->first();
+        return $this->users()->first();
     }
 
     public function users()

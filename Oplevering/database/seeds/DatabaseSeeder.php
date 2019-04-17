@@ -26,6 +26,10 @@ class DatabaseSeeder extends Seeder
             'name' => 'Organizer',
             'slug' => 'organizer',
         ]);
+        $editore = \App\Role::create([
+            'name' => 'PreAccepted',
+            'slug' => 'organizer-pre-accept',
+        ]);
 
         $type = ['admin_action', 'participant_action', 'organizer_action'];
 
