@@ -37,6 +37,15 @@ class UserSeeder extends Seeder
             'email' => 'test@bedrijf.com',
             'password' => \Illuminate\Support\Facades\Hash::make('admin'),
         ]);
+        $company = \App\Company::create([
+            'name' => 'Environment.Exit(1);',
+            'email' => 'info@environment.exit',
+            'postal_code' => '1234 AB',
+            'city' => 'Arnhem',
+            'house_number' => '1',
+            'street' => 'Csharpstraat',
+            'user_id' => $testOrganizer->id,
+        ]);
         $testOrganizer->roles()->attach(\App\Role::where('slug','organizer')->first());
 
         $testParticipant =  \App\User::create([

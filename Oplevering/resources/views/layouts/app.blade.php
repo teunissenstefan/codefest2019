@@ -51,7 +51,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
                             </li>
-                        @endif  
+                        @endif
 
                         @if(Gate::check('admin_action') || Gate::check('organizer_action'))
                             <li class="nav-item">
@@ -71,7 +71,7 @@
                                 <a class="nav-link" href="{{route('register')}}">Registreren</a>
                             </li>
                         @else
-                        
+
                             @can("admin_action")
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
@@ -285,7 +285,7 @@
                 height: 100%;
                 margin: 0;
                 width: 100%;
-                overflow: hidden;
+                /*overflow: hidden;*/
                 position: relative;
             }
             .marquee {
