@@ -18,33 +18,36 @@
                             <thead>
                             <tr>
                                 <th>Naam</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Postcode</th>
+                                <th>Straat</th>
+                                <th>Huisnummer</th>
+                                <th>Geboortedatum</th>
+                                <th>E-mailadres</th>
+                                <th>Acties</th>
                             </tr>
                             </thead>
                             <tbody>
                             @foreach($organizers as $organizer)
                                 <tr>
                                     <td>{{$organizer->firstname}} {{$organizer->infix}} {{$organizer->lastname}}</td>
-                                    <td>{{}}</td>
-                                    <td>Edinburgh</td>
-                                    <td>61</td>
-                                    <td>2011/04/25</td>
-                                    <td>$320,800</td>
+                                    <td>{{$organizer->postal_code}}</td>
+                                    <td>{{$organizer->street}}</td>
+                                    <td>{{$organizer->house_number}}</td>
+                                    <td>{{\Carbon\Carbon::parse($organizer->birthdate)->format("Y")}}</td>
+                                    <td>{{$organizer->email}}</td>
+                                    <td>knopjes</td>
                                 </tr>
                             @endforeach
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>Name</th>
-                                <th>Position</th>
-                                <th>Office</th>
-                                <th>Age</th>
-                                <th>Start date</th>
-                                <th>Salary</th>
+                                <th>Naam</th>
+                                <th>Postcode</th>
+                                <th>Straat</th>
+                                <th>Huisnummer</th>
+                                <th>Geboortedatum</th>
+                                <th>E-mailadres</th>
+                                <th>Acties</th>
                             </tr>
                             </tfoot>
                         </table>
