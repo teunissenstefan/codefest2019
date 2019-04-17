@@ -24,6 +24,8 @@
                         <th scope="col">Categorie</th>
                         <th scope="col">Datum</th>
                         <th scope="col"></th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
                       </tr>
                     </thead>
                     <tbody>
@@ -35,12 +37,11 @@
                                     <td>@php echo $event['category']; @endphp</td>
                                     <td>@php echo $event['date']; @endphp</td>
                                     <td><a class="nav-link" href="{{route('event',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><img src="IMG/info.png" height="25px" width="25px"> Info   </button></a></td>
-                                    <td><a class="nav-link" href="{{route('event.remove',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><img src="IMG/close.png" height="25px" width="25px"></button></a></td>
                                     <td>
-                                            {{Form::open(['method'  => 'DELETE', 'route' => ['event.remove', $event->id]])}}
-                                            <input type="submit" class="btn btn-sm btn-danger float-right" value="Verwijder"/>
-                                            {{Form::close()}}
-                                        </td>
+                                        {{Form::open(['method'  => 'DELETE', 'route' => ['event.remove', $event->id]])}}
+                                        <input type="image" src="IMG/close.png" class="btn btn-default btn-sm" height="35px" width="45px">
+                                        {{Form::close()}}
+                                    </td>
                                 </tr>
                             {{-- @endif --}}
                         @endforeach

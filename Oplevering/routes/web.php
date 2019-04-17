@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
 Route::get('/event/{eventId}', 'EventsController@event')->name('event');
+Route::get('/addevent', 'EventsController@addEvent')->name('addevent');
 Route::delete('/event/remove/{event}', 'EventsController@remove')->name('event.remove');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
@@ -31,6 +32,11 @@ Route::get('/admin/organizers/', 'OrganizerController@index')->name('organizers.
 Route::get('/admin/organizers/{user}/edit', 'OrganizerController@edit')->name('organizers.edit');
 Route::patch('/admin/organizers/{user}/edit', 'OrganizerController@update')->name('organizers.update');
 Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('organizers.delete');
+
+Route::get('/admin/categorieen/', 'CategorieenController@index')->name('categories.show');
+Route::get('/admin/categorieen/{user}/edit', 'CategorieenController@edit')->name('categories.edit');
+Route::patch('/admin/categorieen/{user}/edit', 'CategorieenController@update')->name('categories.update');
+Route::delete('/admin/categorieen/{user}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
 dd(Illuminate\Support\Facades\Auth::user()->events);

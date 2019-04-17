@@ -17,7 +17,7 @@
                             @csrf
                             <div class="row">
                                 <div class="col-md-5">
-                                    {{ Form::label('firstname', 'Voornaam:') }}
+                                    {{ Form::label('firstname', 'Voornaam*:') }}
                                     {{ Form::text('firstname', null, array('class' => 'form-control '.($errors->has('firstname') ? ' is-invalid' : ''),'required','autofocus')) }}
                                     @if ($errors->has('firstname'))
                                         <small class="text-danger" role="alert">
@@ -35,7 +35,7 @@
                                     @endif
                                 </div>
                                 <div class="col-md-5">
-                                    {{ Form::label('lastname', 'Achternaam:') }}
+                                    {{ Form::label('lastname', 'Achternaam*:') }}
                                     {{ Form::text('lastname', null, array('class' => 'form-control '.($errors->has('lastname') ? ' is-invalid' : ''))) }}
                                     @if ($errors->has('lastname'))
                                         <small class="text-danger" role="alert">
@@ -47,7 +47,7 @@
 
                             <div class="row">
                                 <div class="col-md-3">
-                                    {{ Form::label('birthdate', 'Geboortedatum:') }}
+                                    {{ Form::label('birthdate', 'Geboortedatum*:') }}
                                     {{ Form::text('birthdate', null, array('class' => 'form-control '.($errors->has('birthdate') ? ' is-invalid' : ''))) }}
                                     @if ($errors->has('birthdate'))
                                         <small class="text-danger" role="alert">
@@ -56,7 +56,7 @@
                                     @endif
                                 </div>
                                 <div class="col-md-3">
-                                    {{ Form::label('postal_code', 'Postcode:') }}
+                                    {{ Form::label('postal_code', 'Postcode*:') }}
                                     {{ Form::text('postal_code', null, array('class' => 'form-control '.($errors->has('postal_code') ? ' is-invalid' : ''))) }}
                                     @if ($errors->has('postal_code'))
                                         <small class="text-danger" role="alert">
@@ -65,7 +65,7 @@
                                     @endif
                                 </div>
                                 <div class="col-md-6">
-                                    {{ Form::label('house_number', 'Huisnummer:') }}
+                                    {{ Form::label('house_number', 'Huisnummer*:') }}
                                     {{ Form::text('house_number', null, array('class' => 'form-control '.($errors->has('house_number') ? ' is-invalid' : ''))) }}
                                     @if ($errors->has('house_number'))
                                         <small class="text-danger" role="alert">
@@ -77,7 +77,7 @@
 
                             <div class="row">
                                 <div class="col-md-6">
-                                    {{ Form::label('city', 'Woonplaats:') }}
+                                    {{ Form::label('city', 'Woonplaats*:') }}
                                     {{ Form::text('city', null, array('class' => 'form-control '.($errors->has('city') ? ' is-invalid' : ''))) }}
                                     @if ($errors->has('city'))
                                         <small class="text-danger" role="alert">
@@ -86,7 +86,7 @@
                                     @endif
                                 </div>
                                 <div class="col-md-6">
-                                    {{ Form::label('street', 'Straat:') }}
+                                    {{ Form::label('street', 'Straat*:') }}
                                     {{ Form::text('street', null, array('class' => 'form-control '.($errors->has('street') ? ' is-invalid' : ''))) }}
                                     @if ($errors->has('street'))
                                         <small class="text-danger" role="alert">
@@ -98,7 +98,7 @@
 
                             <div class="row">
                                 <div class="form-group col-6">
-                                    <label for="category">Favoriete categorie</label>
+                                    <label for="category">Favoriete categorie*:</label>
                                     <select class="form-control" id="category">
                                         <option value="">Selecteer een categorie</option>
                                         <option value="2">Stefan</option>
@@ -108,7 +108,7 @@
                                     </select>
                                 </div>
                                 <div class="col-md-6">
-                                    {{ Form::label('email', 'E-mailadres:') }}
+                                    {{ Form::label('email', 'E-mailadres*:') }}
                                     {{ Form::text('email', null, array('class' => 'form-control '.($errors->has('email') ? ' is-invalid' : ''))) }}
                                     @if ($errors->has('email'))
                                         <small class="text-danger" role="alert">
