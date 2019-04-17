@@ -46,6 +46,11 @@
                                 <a class="nav-link" href="{{route('register')}}">Registreren</a>
                             </li>
                         @else
+                            @can("admin_action")
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
+                                </li>
+                            @endcan
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('logout')}}"
                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">Uitloggen</a>
