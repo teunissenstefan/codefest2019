@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
                 <div class="card">
                         <div class="card-header">Event</div>
                         <div class="card-body">
@@ -29,7 +29,7 @@
                             <tr>
                                 <td>@php echo $event['name']; @endphp</th>
                                 <td>@php echo $event['description']; @endphp</th>
-                                <td>@php echo $event['orginazor']; @endphp</th>
+                                <td>@php echo $event->user->firstname; @endphp</th>
                                 <td>@php echo $event['category']; @endphp</th>
                                 <td>@php echo $event['date']; @endphp</th>
                                 <td>@php echo $event['postal_code']; @endphp</th>

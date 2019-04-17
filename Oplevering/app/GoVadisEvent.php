@@ -3,6 +3,8 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
+use App\UserEvents;
 
 class GoVadisEvent extends Model
 {
@@ -16,4 +18,19 @@ class GoVadisEvent extends Model
         'street',
         'max_signed_up'
     ];
+
+    public function getUserAttribute()
+    {
+        return $this->users->first();
+    }
+
+    public function users()
+    {
+        return $this->belongsToMany(
+            User::class,
+            'user_events',
+            'event_id',
+            'user_id'
+        );
+    }
 }

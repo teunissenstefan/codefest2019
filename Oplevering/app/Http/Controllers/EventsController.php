@@ -50,9 +50,9 @@ class EventsController extends Controller
         return view("events/events", ["events"=>$events]);
     }
 
-    public function event(GoVadisEvent $eventId)
+    public function event(GoVadisEvent $event)
     {
-        return view("events/event", ["event"=>$eventId]);
+        return view("events/event", ["event"=>$event]);
     }
 
     public function remove(GoVadisEvent $event, Request $request)
