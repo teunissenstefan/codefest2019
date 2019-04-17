@@ -11,7 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
         $this->call(EventsTableSeeder::class);
 
 
@@ -61,17 +60,7 @@ class DatabaseSeeder extends Seeder
             'role_id' => \App\Role::where('slug','organizer')->first()->id
         ]);
 
-        $admin =  \App\User::create([
-            'firstname' => 'Adminus',
-            'infix' => '',
-            'lastname' => 'Administratus',
-            'postal_code' => '6660 HD',
-            'house_number' => '666',
-            'street' => 'Adminstraat',
-            'birthdate' => '1666-06-24',
-            'email' => 'admin@admin.admin',
-            'password' => \Illuminate\Support\Facades\Hash::make('admin'),
-        ]);
-        $admin->roles()->attach(\App\Role::where('slug','admin')->first());
+
+        $this->call(UserSeeder::class);
     }
 }
