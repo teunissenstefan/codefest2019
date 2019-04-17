@@ -37,6 +37,8 @@
             </table>
             @if(Gate::check('admin_action') || Gate::check('organizer_action'))
                 <a class="nav-link" href="{{route('eventedit',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><h3>Pas Event Aan</h3></button></a>
+            @elseif(Gate::check('participant_action'))
+                <a class="nav-link" href="{{route('eventsign',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><h3>Meld Je Aan</h3></button></a>
             @endif
         </div>
     </div>
