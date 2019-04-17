@@ -59,10 +59,27 @@ class EventsController extends Controller
             return view("events/addevent");
         }
         elseif(Auth::User()->can('admin_action') == true){
-            return view("events/addevents");
+            return view("events/addevent");
         }
         else {
             return view("events/events", ["events"=>$events]);
         }
+    }
+
+    public function eventStore(GoVadisEvent $goVadisEvent, Request $request)
+    {
+        $goVadisEvent->fill($request->all());
+        $goVadisEvent->orginazor = Auth::user()->id;
+        $goVadisEvent->signed_up = 0;
+        $goVadisEvent->finished = 0;
+        $goVadisEvent->place_points = 'na';
+        $goVadisEvent->save();
+        $request->session()->flash('status', 'Event toegevoegd!');
+        return redirect(route('addevent'));
+    }
+
+    public function eventEdit(GoVadisEvent $eventId)
+    {
+        return view("events/eventedit", ["event"=>$eventId]);
     }
 }

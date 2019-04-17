@@ -29,29 +29,29 @@ class CategorieenController extends Controller
         return view('admin.categorieen.index')->with($data);
     }
 
-    public function edit(User $user, Request $request)
+    public function edit(Category $category, Request $request)
     {
         $data = [
-            'category' => $user
+            'category' => $category
         ];
         return view('admin.categorieen.edit')->with($data);
     }
 
-    public function update(User $user, Request $request)
+    public function update(category $category, Request $request)
     {
-        $user->fill($request->all());
-        $user->save();
+        $category->fill($request->all());
+        $category->save();
         $data = [
-            'category' => $user
+            'category' => $category
         ];
         $request->session()->flash('status', 'Categorieen aangepast!');
-        return redirect(route('categorieen.show'));
+        return redirect(route('categories.show'));
     }
 
-    public function delete(User $user, Request $request)
+    public function delete(category $category, Request $request)
     {
-        $user->delete();
+        $category->delete();
         $request->session()->flash('status', 'Categorieen verwijderd!');
-        return redirect(route('categorieen.show'));
+        return redirect(route('categories.show'));
     }
 }

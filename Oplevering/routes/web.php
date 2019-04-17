@@ -23,6 +23,8 @@ Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
 Route::get('/event/{eventId}', 'EventsController@event')->name('event');
 Route::get('/addevent', 'EventsController@addEvent')->name('addevent');
+Route::get('/eventedit/{eventId}', 'EventsController@eventEdit')->name('eventedit');
+Route::post('/addevent', 'EventsController@eventStore')->name('event.add');
 Route::delete('/event/remove/{event}', 'EventsController@remove')->name('event.remove');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
@@ -34,9 +36,9 @@ Route::patch('/admin/organizers/{user}/edit', 'OrganizerController@update')->nam
 Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('organizers.delete');
 
 Route::get('/admin/categorieen/', 'CategorieenController@index')->name('categories.show');
-Route::get('/admin/categorieen/{user}/edit', 'CategorieenController@edit')->name('categories.edit');
-Route::patch('/admin/categorieen/{user}/edit', 'CategorieenController@update')->name('categories.update');
-Route::delete('/admin/categorieen/{user}', 'CategorieenController@delete')->name('categories.delete');
+Route::get('/admin/categorieen/{category}/edit', 'CategorieenController@edit')->name('categories.edit');
+Route::patch('/admin/categorieen/{category}/edit', 'CategorieenController@update')->name('categories.update');
+Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
     dd(\Illuminate\Support\Facades\Auth::user()->favorite_category);
