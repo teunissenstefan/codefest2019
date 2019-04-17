@@ -9,6 +9,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Role;
 use App\User;
 use Illuminate\Http\Request;
 
@@ -29,7 +30,7 @@ class OrganizerController extends Controller
         })->get();
 
         $unaccepted_organizers = User::whereHas('roles', function ($query) {
-            $query->where('slug', '=', 'organizer');
+            $query->where('slug', '=', 'organizer-pre-accept');
         })->whereHas('company', function ($query) {
             $query->where('accepted', '=', '0');
 
@@ -71,6 +72,10 @@ class OrganizerController extends Controller
     {
         $user->company->accepted = 1;
         $user->company->save();
+        if(count($user->roles)){
+            $user->roles()->detach();
+        }
+        $user->roles()->attach(Role::where('slug','organizer')->first());
         $request->session()->flash('status', 'Aanmelding geaccepteerd!');
         return redirect(route('organizers.show'));
     }

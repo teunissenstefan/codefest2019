@@ -46,7 +46,7 @@ class UserSeeder extends Seeder
             'street' => 'Csharpstraat',
             'user_id' => $testOrganizer->id,
         ]);
-        $testOrganizer->roles()->attach(\App\Role::where('slug','organizer')->first());
+        $testOrganizer->roles()->attach(\App\Role::where('slug','organizer-pre-accept')->first());
 
         $testParticipant =  \App\User::create([
             'firstname' => 'Participant',

@@ -195,7 +195,7 @@
                                 <label for="company[email]" class="col-md-4 col-form-label text-md-right">E-mailadres Bedrijf</label>
 
                                 <div class="col-md-6">
-                                    <input id="company[email]" type="text" class="form-control{{ $errors->has('company.email') ? ' is-invalid' : '' }}" name="company[email]" autocomplete="new-password">
+                                    <input id="company[email]" type="email" class="form-control{{ $errors->has('company.email') ? ' is-invalid' : '' }}" name="company[email]" autocomplete="new-password">
 
                                     @if ($errors->has('company.email'))
                                         <span class="invalid-feedback" role="alert">
