@@ -15,10 +15,10 @@
                     <thead>
                         <tr>
                         <th scope="col">Naam</th>
+                        <th scope="col">Naam</th>
                         <th scope="col">Organizer</th>
                         <th scope="col">Categorie</th>
                         <th scope="col">Datum</th>
-                        <th scope="col"></th>
                         </tr>
                     </thead>
                     <tbody>

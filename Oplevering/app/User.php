@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\UserEvents;
 
 class User extends Authenticatable
 {
@@ -49,6 +50,16 @@ class User extends Authenticatable
     public function roles()
     {
         return $this->belongsToMany(Role::class, 'role_users');
+    }
+
+    public function events()
+    {
+        return $this->belongsToMany(
+            GoVadisEvent::class,
+            'user_events',
+            'user_id',
+            'event_id'
+        );
     }
 
     public function hasAccess(array $permissions) : bool
