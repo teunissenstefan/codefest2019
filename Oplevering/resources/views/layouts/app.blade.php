@@ -30,7 +30,7 @@
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-light mb-4">
             <div class="container">
-                <a class="navbar-brand" href="{{route('home')}}">{{ config('app.name', 'Laravel') }}</a>
+                <a class="navbar-brand" href="{{route('home')}}">Govadis</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
