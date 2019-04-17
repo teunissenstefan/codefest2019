@@ -52,6 +52,7 @@
                 text-align: right;
                 position: right 50px;
                 font-size: 20px;
+                margin-right: 20px;
             }
 
             .links > a {
