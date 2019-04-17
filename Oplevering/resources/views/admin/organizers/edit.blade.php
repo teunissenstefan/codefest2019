@@ -128,4 +128,7 @@
             </div>
         </div>
     </div>
+    <script>
+        $("#birthdate").flatpickr();
+    </script>
 @endsection

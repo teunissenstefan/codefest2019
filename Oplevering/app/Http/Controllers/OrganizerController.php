@@ -45,7 +45,8 @@ class OrganizerController extends Controller
         $data = [
             'organizer' => $user
         ];
-        return view('admin.organizers.edit')->with($data);
+        $request->session()->flash('status', 'Organisator aangepast!');
+        return redirect(route('organizers.show'));
     }
 
     public function delete(User $user, Request $request)

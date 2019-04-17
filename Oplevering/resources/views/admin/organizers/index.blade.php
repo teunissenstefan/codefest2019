@@ -5,8 +5,9 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Organisatoren Beheren <a class="btn btn-sm btn-success float-right"
-                                                                      href="#">Toevoegen</a></div>
+                    <div class="card-header">Organisatoren Beheren
+                        {{--<a class="btn btn-sm btn-success float-right" href="#">Toevoegen</a>--}}
+                    </div>
 
                     <div class="card-body">
                         @if (session('status'))

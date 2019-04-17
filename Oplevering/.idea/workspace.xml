@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd8dae83-460d-47e1-864f-115c82f8c3a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/organizers/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/organizers/edit.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/admin/organizers/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/organizers/index.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/register.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/register.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -52,13 +45,13 @@
           <entry key="env" value="2" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
-          <entry key="php" value="56" />
+          <entry key="php" value="57" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="2" />
-          <entry key="Blade" value="11" />
+          <entry key="Blade" value="12" />
           <entry key="JSON" value="2" />
           <entry key="PHP" value="45" />
         </counts>
@@ -67,15 +60,15 @@
         <counts>
           <entry key="env" value="26" />
           <entry key="json" value="2" />
-          <entry key="php" value="3726" />
+          <entry key="php" value="3789" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="26" />
-          <entry key="Blade" value="1702" />
+          <entry key="Blade" value="1754" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="2024" />
+          <entry key="PHP" value="2035" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -96,11 +89,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/organizers/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="37" column="66" lean-forward="true" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
+            <state relative-caret-position="144">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-64">
+              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
             </state>
           </provider>
         </entry>
@@ -108,8 +110,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="656">
-              <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
+            <state relative-caret-position="688">
+              <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
               <folding>
                 <element signature="e#133#146#0#PHP" expanded="true" />
               </folding>
@@ -120,17 +122,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/organizers/edit.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+            <state relative-caret-position="779">
+              <caret line="131" column="34" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="26" column="89" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
+            <state relative-caret-position="560">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
             </state>
           </provider>
         </entry>
@@ -161,18 +163,18 @@
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/organizers/index.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/database/seeds/UserSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
         <option value="$PROJECT_DIR$/.env" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/organizers/edit.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/organizers/edit.blade.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/organizers/index.blade.php" />
       </list>
     </option>
   </component>
@@ -429,7 +431,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="home.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/home.blade.php&#10;user.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/User.php&#10;register.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;events&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;event&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;eventscon&#9;null&#9;null&#10;database&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/database/seeds/DatabaseSeeder.php&#10;.env&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/.env&#10;authserv&#9;null&#9;null&#10;web.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/routes/web.php&#10;permission&#9;null&#9;null&#10;role.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Role.php" />
+    <property name="SearchEverywhereHistoryKey" value="app.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;home.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/home.blade.php&#10;user.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/User.php&#10;register.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;events&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;event&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;eventscon&#9;null&#9;null&#10;database&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/database/seeds/DatabaseSeeder.php&#10;.env&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/.env&#10;authserv&#9;null&#9;null&#10;web.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/routes/web.php&#10;permission&#9;null&#9;null&#10;role.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Role.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -459,12 +461,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555488042117</updated>
       <workItem from="1555488043233" duration="12840000" />
-      <workItem from="1555501112570" duration="2519000" />
+      <workItem from="1555501112570" duration="2918000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15359000" />
+    <option name="totallyTimeSpent" value="15758000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="-8" width="1902" height="1044" extended-state="6" />
@@ -629,13 +631,6 @@
     <entry file="file://$PROJECT_DIR$/database/seeds/EventsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="608">
-          <caret line="51" column="86" selection-start-line="51" selection-start-column="86" selection-end-line="51" selection-end-column="86" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/profile/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="699">
@@ -699,23 +694,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="656">
-          <caret line="46" column="10" lean-forward="true" selection-start-line="46" selection-start-column="10" selection-end-line="46" selection-end-column="10" />
-          <folding>
-            <element signature="e#133#146#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/organizers/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="37" column="66" lean-forward="true" selection-start-line="37" selection-start-column="66" selection-end-line="37" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1472">
@@ -723,17 +701,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/organizers/edit.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="48" column="14" lean-forward="true" selection-start-line="48" selection-start-column="14" selection-end-line="48" selection-end-column="14" />
+        <state relative-caret-position="560">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/organizers/edit.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="26" column="89" selection-start-line="26" selection-start-column="89" selection-end-line="26" selection-end-column="89" />
+        <state relative-caret-position="779">
+          <caret line="131" column="34" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="48" column="50" selection-start-line="48" selection-start-column="50" selection-end-line="48" selection-end-column="50" />
+          <folding>
+            <element signature="e#133#146#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-64">
+          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/organizers/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>

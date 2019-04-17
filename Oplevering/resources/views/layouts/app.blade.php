@@ -12,6 +12,7 @@
     <!-- Scripts -->
     <script src="{{asset('js/jquery-3.4.0.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/flatpickr.js')}}"></script>
     <script src="{{asset('js/jquery.dataTables.min.js')}}"></script>
     <script src="{{asset('js/dataTables.bootstrap4.min.js')}}"></script>
 
@@ -21,6 +22,7 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/flatpickr.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/jquery.dataTables.min.css')}}">
     <link rel="stylesheet" href="{{asset('css/dataTables.bootstrap4.min.css')}}">
 </head>
