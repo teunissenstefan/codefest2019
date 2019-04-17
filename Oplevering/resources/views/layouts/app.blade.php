@@ -39,15 +39,28 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('events')}}">Events</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('profile')}}">Profiel</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
-                        </li>
+                        @if(Gate::check('admin_action') || Gate::check('organizer_action') || Gate::check('participant_action'))
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('events')}}">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('profile')}}">Profiel</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
+                            </li>
+    
+                            @can('admin_action')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('addevent')}}">Voeg Event toe</a>
+                                </li>
+                            @elsecan('organizer_action')
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('addevent')}}">Voeg Event toe</a>
+                                </li>
+                            @endcan
+                        @endif  
+                        
                         
                         @guest
                             <li class="nav-item">
@@ -57,11 +70,14 @@
                                 <a class="nav-link" href="{{route('register')}}">Registreren</a>
                             </li>
                         @else
+                        
+                        @if(Gate::check('admin_action') || Gate::check('organizer_action') || Gate::check('participant_action'))
                             @can("admin_action")
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
                                 </li>
                             @endcan
+                        @endif
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('logout')}}"
                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">Uitloggen</a>

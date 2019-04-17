@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
 Route::get('/event/{eventId}', 'EventsController@event')->name('event');
+Route::get('/addevent', 'EventsController@addEvent')->name('addevent');
 Route::delete('/event/remove/{event}', 'EventsController@remove')->name('event.remove');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');

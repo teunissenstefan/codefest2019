@@ -51,4 +51,18 @@ class EventsController extends Controller
         $request->session()->flash('status', 'Event verwijderd!');
         return redirect(route('myevents'));
     }
+
+    public function addEvent()
+    {
+        $events = GoVadisEvent::all();
+        if(Auth::User()->can('organizer_action') == true){
+            return view("events/addevent");
+        }
+        elseif(Auth::User()->can('admin_action') == true){
+            return view("events/addevents");
+        }
+        else {
+            return view("events/events", ["events"=>$events]);
+        }
+    }
 }
