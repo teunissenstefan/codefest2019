@@ -19,7 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/events', 'EventsController@index')->name('events');
+Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
+Route::get('/events', 'EventsController@events')->name('events');
 
 Route::get('/admin/organizers/', 'OrganizerController@index')->name('organizers.show');
 Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('organizers.delete');

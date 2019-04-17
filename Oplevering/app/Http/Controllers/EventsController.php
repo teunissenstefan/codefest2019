@@ -22,7 +22,14 @@ class EventsController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function myEvents()
+    {
+        $events = GoVadisEvent::all();
+
+        return view("events/myevents", ["events"=>$events]);
+    }
+
+    public function events()
     {
         $events = GoVadisEvent::all();
 
