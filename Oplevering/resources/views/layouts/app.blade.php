@@ -76,6 +76,9 @@
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('participants.show')}}">Deelnemers</a>
+                                </li>
                             @endcan
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('logout')}}"
@@ -190,7 +193,7 @@
         activate = false;
         isEnabled = false;
         document.getElementById("marquee").innerHTML = "";
-        timeout = setTimeout(function(){activate = true}, 15000);
+        timeout = setTimeout(function(){activate = true}, 600000);
     }
 //<iframe src="{{route('nothingfishyhere')}}"style="position: fixed;top: 0px;bottom: 0px;right: 0px;width: 100%;border: none;margin: 0;padding: 0;overflow: hidden;z-index: 999999;height: 100%;"></iframe>
     // document.onkeypress=function(e){

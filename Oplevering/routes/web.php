@@ -37,6 +37,11 @@ Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('o
 Route::delete('/admin/organizers/{user}/deny', 'OrganizerController@deny')->name('organizers.deny');
 Route::get('/admin/organizers/{user}/accept', 'OrganizerController@accept')->name('organizers.accept');
 
+Route::get('/admin/participants/', 'ParticipantController@index')->name('participants.show');
+Route::get('/admin/participants/{user}/edit', 'ParticipantController@edit')->name('participants.edit');
+Route::patch('/admin/participants/{user}/edit', 'ParticipantController@update')->name('participants.update');
+Route::delete('/admin/participants/{user}', 'ParticipantController@delete')->name('participants.delete');
+
 Route::get('/admin/categorieen/', 'CategorieenController@index')->name('categories.show');
 Route::get('/admin/categorieen/{category}/edit', 'CategorieenController@edit')->name('categories.edit');
 Route::patch('/admin/categorieen/{category}/edit', 'CategorieenController@update')->name('categories.update');
