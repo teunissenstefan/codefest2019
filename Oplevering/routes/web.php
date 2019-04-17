@@ -39,7 +39,8 @@ Route::patch('/admin/categorieen/{user}/edit', 'CategorieenController@update')->
 Route::delete('/admin/categorieen/{user}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
-dd(Illuminate\Support\Facades\Auth::user()->events);
+    dd(\Illuminate\Support\Facades\Auth::user()->favorite_category);
+//dd(Illuminate\Support\Facades\Auth::user()->events);
 
 //    echo Auth::user()->can("participant_action")?"ja":"nee";
     // $users = \App\User::whereHas('roles', function ($query) {
