@@ -21,7 +21,7 @@
             }
 
             .full-height {
-                height: 100vh;
+                height: 96vh;
             }
 
             .flex-center {
@@ -46,6 +46,12 @@
 
             .title {
                 font-size: 84px;
+            }
+
+            .credits {
+                text-align: right;
+                position: right 50px;
+                font-size: 20px;
             }
 
             .links > a {
@@ -81,19 +87,17 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    Laravel
+                Govadis
                 </div>
+                <div>
+                    <img src="IMG/Govadis.JPG" alt="Govadis" width="600" height="300"> 
 
-                <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
             </div>
+        </div>
+        <div class="credits">
+            Made at Codefest by Environment.Exit(1);
+
         </div>
     </body>
 </html>
