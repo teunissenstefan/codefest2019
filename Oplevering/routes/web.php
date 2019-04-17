@@ -25,6 +25,7 @@ Route::get('/event/{eventId}', 'EventsController@event')->name('event');
 Route::get('events/index', 'EventsController@index')->name('events.index');
 Route::get('/addevent', 'EventsController@addEvent')->name('addevent');
 Route::get('/eventedit/{eventId}', 'EventsController@eventEdit')->name('eventedit');
+Route::get('/eventsign/{eventId}', 'EventsController@eventSign')->name('eventsign');
 Route::post('/addevent', 'EventsController@eventStore')->name('event.add');
 Route::delete('/event/remove/{event}', 'EventsController@remove')->name('event.remove');
 

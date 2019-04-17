@@ -38,9 +38,7 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                        </li>
+                         
                         @if(Gate::check('admin_action') || Gate::check('organizer_action') || Gate::check('participant_action'))
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('events')}}">Events</a>
@@ -51,7 +49,7 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
                             </li>
-                        @endif
+                        @endif  
 
                         @if(Gate::check('admin_action') || Gate::check('organizer_action'))
                             <li class="nav-item">
@@ -71,13 +69,10 @@
                                 <a class="nav-link" href="{{route('register')}}">Registreren</a>
                             </li>
                         @else
-
+                        
                             @can("admin_action")
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('participants.show')}}">Deelnemers</a>
                                 </li>
                             @endcan
                             <li class="nav-item">
@@ -288,7 +283,7 @@
                 height: 100%;
                 margin: 0;
                 width: 100%;
-                /*overflow: hidden;*/
+                overflow: hidden;
                 position: relative;
             }
             .marquee {

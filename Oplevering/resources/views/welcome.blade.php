@@ -62,7 +62,7 @@
                 font-weight: 600;
                 letter-spacing: .1rem;
                 text-decoration: none;
-                text-transform: uppercase;
+                text-transform: uppercase;4
             }
 
             .m-b-md {
