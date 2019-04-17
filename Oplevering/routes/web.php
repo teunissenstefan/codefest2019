@@ -23,6 +23,8 @@ Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
 Route::get('/event/{eventId}', 'EventsController@event')->name('event');
 Route::get('/addevent', 'EventsController@addEvent')->name('addevent');
+Route::get('/eventedit/{eventId}', 'EventsController@eventEdit')->name('eventedit');
+Route::post('/addevent', 'EventsController@eventStore')->name('event.add');
 Route::delete('/event/remove/{event}', 'EventsController@remove')->name('event.remove');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
