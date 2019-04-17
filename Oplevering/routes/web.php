@@ -23,6 +23,7 @@ Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
+Route::patch('/profiel/{user}', 'ProfileController@update')->name('profile.update');
 
 Route::get('/admin/organizers/', 'OrganizerController@index')->name('organizers.show');
 Route::get('/admin/organizers/{user}/edit', 'OrganizerController@edit')->name('organizers.edit');
