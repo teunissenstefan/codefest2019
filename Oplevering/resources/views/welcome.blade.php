@@ -90,7 +90,7 @@
                 Govadis
                 </div>
                 <div>
-                    <img src="IMG/Govadis.JPG" alt="Govadis" width="600" height="300"> 
+                    <img src="{{asset('IMG/Govadis.JPG')}}" alt="Govadis" width="600" height="300">
 
                 </div>
             </div>

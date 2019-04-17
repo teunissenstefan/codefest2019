@@ -14,21 +14,11 @@ use Illuminate\Http\Request;
 
 class OrganizerController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
     public function __construct()
     {
         $this->middleware('auth');
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function index()
     {
         $organizers = User::whereHas('roles', function ($query) {
@@ -40,11 +30,6 @@ class OrganizerController extends Controller
         return view('admin.organizers.index')->with($data);
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
     public function edit(User $user, Request $request)
     {
         $data = [
@@ -53,11 +38,16 @@ class OrganizerController extends Controller
         return view('admin.organizers.edit')->with($data);
     }
 
-    /**
-     * Delete.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
+    public function update(User $user, Request $request)
+    {
+        $user->fill($request->all());
+        $user->save();
+        $data = [
+            'organizer' => $user
+        ];
+        return view('admin.organizers.edit')->with($data);
+    }
+
     public function delete(User $user, Request $request)
     {
         $user->delete();
