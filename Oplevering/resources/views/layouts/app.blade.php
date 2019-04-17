@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>Govadis</title>
 
     <!-- Scripts -->
     <script src="{{asset('js/jquery-3.4.0.min.js')}}"></script>
