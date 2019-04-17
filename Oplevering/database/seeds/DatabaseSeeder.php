@@ -63,5 +63,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call(UserSeeder::class);
         $this->call(UserEventsSeeder::class);
+        $this->call(CategorySeeder::class);
     }
 }
