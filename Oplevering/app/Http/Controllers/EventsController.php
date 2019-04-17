@@ -24,8 +24,8 @@ class EventsController extends Controller
      */
     public function index()
     {
-        $events = GoVadisEvent::whereId(1)->first();
+        $events = GoVadisEvent::all();
 
-        return view("events/events", ["events"=>$events['street']]);
+        return view("events/events", ["events"=>$events]);
     }
 }

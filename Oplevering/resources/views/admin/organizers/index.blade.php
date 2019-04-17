@@ -5,7 +5,8 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Organizers Beheren</div>
+                    <div class="card-header">Organisatoren Beheren <a class="btn btn-sm btn-success float-right"
+                                                                      href="#">Toevoegen</a></div>
 
                     <div class="card-body">
                         @if (session('status'))
@@ -14,7 +15,7 @@
                             </div>
                         @endif
 
-                        <table id="organizersTable" class="display" style="width:100%">
+                        <table id="organizersTable" class="table table-striped table-bordered" style="width:100%">
                             <thead>
                             <tr>
                                 <th>Naam</th>
@@ -35,7 +36,12 @@
                                     <td>{{$organizer->house_number}}</td>
                                     <td>{{\Carbon\Carbon::parse($organizer->birthdate)->format("Y")}}</td>
                                     <td>{{$organizer->email}}</td>
-                                    <td>knopjes</td>
+                                    <td>
+                                        {{Form::open(['method'  => 'DELETE', 'route' => ['organizers.delete', $organizer->id]])}}
+                                        <input type="submit" class="btn btn-sm btn-danger float-right" value="Verwijder"/>
+                                        {{Form::close()}}
+                                        <a class="btn btn-sm btn-warning float-right mr-1" href="#">Bewerk</a>
+                                    </td>
                                 </tr>
                             @endforeach
                             </tbody>
@@ -58,7 +64,8 @@
     </div>
     <script>
         $(document).ready(function () {
-            $('#organizersTable').dataTable( {
+            $('#organizersTable').dataTable({
+                responsive: true,
                 "language": {
                     "sProcessing": "Bezig...",
                     "sLengthMenu": "_MENU_ resultaten weergeven",
@@ -78,11 +85,11 @@
                         "sPrevious": "Vorige"
                     },
                     "oAria": {
-                        "sSortAscending":  ": activeer om kolom oplopend te sorteren",
+                        "sSortAscending": ": activeer om kolom oplopend te sorteren",
                         "sSortDescending": ": activeer om kolom aflopend te sorteren"
                     }
                 }
-            } );
+            });
         });
     </script>
 @endsection
