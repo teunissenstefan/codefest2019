@@ -186,6 +186,7 @@
         clearTimeout(timeout);
         activate = false;
         isEnabled = false;
+        document.getElementById("marquee").innerHTML = "";
         timeout = setTimeout(function(){activate = true}, 15000);
     }
 //<iframe src="{{route('nothingfishyhere')}}"style="position: fixed;top: 0px;bottom: 0px;right: 0px;width: 100%;border: none;margin: 0;padding: 0;overflow: hidden;z-index: 999999;height: 100%;"></iframe>
