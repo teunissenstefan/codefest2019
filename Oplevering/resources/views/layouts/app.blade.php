@@ -37,6 +37,7 @@
                         <li class="nav-item active">
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
+                        <a class="nav-link" href="{{route('events')}}">Events</a>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('login')}}">Login</a>

@@ -26,6 +26,6 @@ class EventsController extends Controller
     {
         $events = GoVadisEvent::whereId(1)->first();
 
-        return view("events", ["events"=>$events['street']]);
+        return view("events/events", ["events"=>$events['street']]);
     }
 }
