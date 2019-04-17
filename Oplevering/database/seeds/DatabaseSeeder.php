@@ -12,5 +12,66 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
+
+
+
+        $admin = \App\Role::create([
+            'name' => 'Admin',
+            'slug' => 'admin',
+        ]);
+        $participant = \App\Role::create([
+            'name' => 'Participant',
+            'slug' => 'participant',
+        ]);
+        $editor = \App\Role::create([
+            'name' => 'Organizer',
+            'slug' => 'organizer',
+        ]);
+
+        $type = ['admin_action', 'participant_action', 'organizer_action'];
+
+        foreach($type as $value)
+        {
+            \Illuminate\Support\Facades\DB::table('permissions')->insert([
+                'name' => $value,
+                'label' => $value ,
+                'updated_at' => \Carbon\Carbon::now(),
+                'created_at' => \Carbon\Carbon::now()
+            ]);
+        }
+
+        foreach(\App\Permission::all() as $value)
+        {
+            \Illuminate\Support\Facades\DB::table('permission_roles')->insert([
+                'permission_id' => $value->id,
+                'role_id' => 1
+            ]);
+        }
+
+        \Illuminate\Support\Facades\DB::table('permission_roles')->insert([
+            'permission_id' => \App\Permission::where('label','participant_action')->first()->id,
+            'role_id' => \App\Role::where('slug','participant')->first()->id
+        ]);
+        \Illuminate\Support\Facades\DB::table('permission_roles')->insert([
+            'permission_id' => \App\Permission::where('label','organizer_action')->first()->id,
+            'role_id' => \App\Role::where('slug','organizer')->first()->id
+        ]);
+        \Illuminate\Support\Facades\DB::table('permission_roles')->insert([
+            'permission_id' => \App\Permission::where('label','participant_action')->first()->id,
+            'role_id' => \App\Role::where('slug','organizer')->first()->id
+        ]);
+
+        $admin =  \App\User::create([
+            'firstname' => 'Adminus',
+            'infix' => '',
+            'lastname' => 'Administratus',
+            'postal_code' => '6660 HD',
+            'house_number' => '666',
+            'street' => 'Adminstraat',
+            'birthdate' => '1666-06-24',
+            'email' => 'admin@admin.admin',
+            'password' => \Illuminate\Support\Facades\Hash::make('admin'),
+        ]);
+        $admin->roles()->attach(\App\Role::where('slug','admin')->first());
     }
 }

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use App\Http\Controllers\Controller;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
@@ -49,7 +50,13 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
+            'firstname' => ['required', 'string', 'max:255'],
+            'infix' => ['string', 'max:255'],
+            'lastname' => ['required', 'string', 'max:255'],
+            'postal_code' => ['required', 'string', 'max:255'],
+            'house_number' => ['required', 'string', 'max:255'],
+            'street' => ['required', 'string', 'max:255'],
+            'birthdate' => ['required', 'date', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
         ]);
@@ -64,7 +71,13 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
+            'firstname' => $data['firstname'],
+            'infix' => $data['infix'],
+            'lastname' => $data['lastname'],
+            'postal_code' => $data['postal_code'],
+            'house_number' => $data['house_number'],
+            'street' => $data['street'],
+            'birthdate' => Carbon::parse($data['birthdate']),
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
         ]);

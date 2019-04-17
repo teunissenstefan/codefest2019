@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/foo', function (\Illuminate\Http\Request $request) {
+    echo Auth::user()->can("perticipant_action")?"ja":"nee";
+});
