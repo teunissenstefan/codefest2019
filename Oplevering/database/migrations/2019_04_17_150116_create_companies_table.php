@@ -22,6 +22,7 @@ class CreateCompaniesTable extends Migration
             $table->string('city');
             $table->string('house_number');
             $table->string('street');
+            $table->boolean('accepted')->default('0');//accepteren maken
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

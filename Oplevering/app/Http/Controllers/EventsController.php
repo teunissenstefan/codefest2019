@@ -82,4 +82,13 @@ class EventsController extends Controller
     {
         return view("events/eventedit", ["event"=>$eventId]);
     }
+
+    public function eventSign(GoVadisEvent $eventId, Request $request)
+    {
+        $events = GoVadisEvent::find($eventId['id']);
+        $user = Auth::user();
+        $user->events()->attach($events);
+        $request->session()->flash('status', 'Aangemeld!');
+        return redirect(route('event', ["event"=>$eventId['id']]));
+    }
 }
