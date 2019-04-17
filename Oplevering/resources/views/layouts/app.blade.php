@@ -38,6 +38,7 @@
                             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                         </li>
                         <a class="nav-link" href="{{route('events')}}">Events</a>
+                        <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
                         @guest
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('login')}}">Login</a>
@@ -46,6 +47,11 @@
                                 <a class="nav-link" href="{{route('register')}}">Registreren</a>
                             </li>
                         @else
+                            @can("admin_action")
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
+                                </li>
+                            @endcan
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('logout')}}"
                                    onclick="event.preventDefault();document.getElementById('logout-form').submit();">Uitloggen</a>
