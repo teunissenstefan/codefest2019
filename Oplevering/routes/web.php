@@ -1,4 +1,5 @@
 <?php
+use App\GoVadisEvent;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,12 +22,18 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
-Route::get('/event/{eventId}', 'EventsController@event')->name('event');
+Route::get('/event/{event}', 'EventsController@event')->name('event');
 Route::get('/addevent', 'EventsController@addEvent')->name('addevent');
 Route::get('/eventedit/{eventId}', 'EventsController@eventEdit')->name('eventedit');
 Route::get('/eventsign/{eventId}', 'EventsController@eventSign')->name('eventsign');
-Route::post('/addevent', 'EventsController@eventStore')->name('event.add');
 Route::delete('/event/remove/{event}', 'EventsController@remove')->name('event.remove');
+
+Route::get('/events/index', 'EventsController@index')->name('events.index');
+Route::get('/events/new', 'EventsController@new')->name('events.new');
+Route::get('/events/insert', 'EventsController@insert')->name('events.insert');
+Route::post('/events/addevent', 'EventsController@eventStore')->name('event.add');
+Route::get('/events/edit/{category}/edit', 'EventsController@edit')->name('events.edit');
+Route::patch('/events/update/{category}/edit', 'EventsController@update')->name('events.update');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
 Route::patch('/profiel/{user}', 'ProfileController@update')->name('profile.update');
@@ -51,6 +58,8 @@ Route::post('admin/categorieen/new', 'CategorieenController@insert')->name('cate
 Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
+    $event = GoVadisEvent::first();
+    dd($event->user);
 //    $organizers = \App\User::whereHas('roles', function ($query) {
 //        $query->where('slug', '=', 'organizer');
 //    })->whereHas('company', function ($query) {

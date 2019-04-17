@@ -34,7 +34,7 @@
                             {{-- @if($event['finished'] == 0) --}}
                                 <tr>
                                     <td>@php echo $event['name']; @endphp</th>
-                                    <td>@php echo $event['orginazor']; @endphp</td>
+                                    <td>@php echo $event->user->firstname; @endphp</td>
                                     <td>@php echo $event['category']; @endphp</td>
                                     <td>@php echo $event['date']; @endphp</td>
                                     <td><a class="nav-link" href="{{route('event',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><img src="IMG/info.png" height="25px" width="25px"> Info   </button></a></td>
@@ -70,7 +70,7 @@
                             {{-- @if($event['finished'] == 1) --}}
                                 <tr>
                                     <td>@php echo $event['name']; @endphp</th>
-                                    <td>@php echo $event['orginazor']; @endphp</td>
+                                    <td>@php echo $event->user->firstname; @endphp</td>
                                     <td>@php echo $event['category']; @endphp</td>
                                     <td>@php echo $event['date']; @endphp</td>
                                     <td>@php echo $event['place_points']; @endphp</td>

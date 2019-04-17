@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-10">
                 <div class="card">
                         <div class="card-header">Event</div>
                         <div class="card-body">
@@ -29,7 +29,7 @@
                             <tr>
                                 <td>@php echo $event['name']; @endphp</th>
                                 <td>@php echo $event['description']; @endphp</th>
-                                <td>@php echo $event['orginazor']; @endphp</th>
+                                <td>@php echo $event->user->firstname; @endphp</th>
                                 <td>@php echo $event['category']; @endphp</th>
                                 <td>@php echo $event['date']; @endphp</th>
                                 <td>@php echo $event['postal_code']; @endphp</th>
@@ -38,9 +38,7 @@
                             </tr>
                         </tbody>
                     </table>
-                    @if(Gate::check('admin_action') || Gate::check('organizer_action'))
-                        <a class="nav-link" href="{{route('eventedit',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><h3>Pas Event Aan</h3></button></a>
-                    @elseif(Gate::check('participant_action'))
+                    @if(Gate::check('participant_action'))
                         <a class="nav-link" href="{{route('eventsign',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><h3>Meld Je Aan</h3></button></a>
                     @endif
                 </div>

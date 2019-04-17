@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use Illuminate\Http\Request;
 use App\GoVadisEvent;
 use App\UserEvents;
@@ -33,6 +34,15 @@ class EventsController extends Controller
         return view("events/myevents", ["finishedEvents"=>$finishedEvents,"openEvents"=>$openEvents]);
     }
 
+    public function index()
+    {
+        $events = GoVadisEvent::all();
+        $data = [
+            'events' => $events
+        ];
+        return view('events.index')->with($data);
+    }
+
     public function events()
     {
         $events = GoVadisEvent::all();
@@ -40,9 +50,9 @@ class EventsController extends Controller
         return view("events/events", ["events"=>$events]);
     }
 
-    public function event(GoVadisEvent $eventId)
+    public function event(GoVadisEvent $event)
     {
-        return view("events/event", ["event"=>$eventId]);
+        return view("events/event", ["event"=>$event]);
     }
 
     public function remove(GoVadisEvent $event, Request $request)
@@ -75,7 +85,7 @@ class EventsController extends Controller
         $goVadisEvent->place_points = 'na';
         $goVadisEvent->save();
         $request->session()->flash('status', 'Event toegevoegd!');
-        return redirect(route('addevent'));
+        return redirect(route('events.index'));
     }
 
     public function eventEdit(GoVadisEvent $eventId)
@@ -90,5 +100,25 @@ class EventsController extends Controller
         $user->events()->attach($events);
         $request->session()->flash('status', 'Aangemeld!');
         return redirect(route('event', ["event"=>$eventId['id']]));
+    }
+
+    public function new()
+    {
+        $categories = GoVadisEvent::all();
+        if(Auth::User()->can('organizer_action') == true){
+            $data = [
+                'categories' => Category::pluck('category','id')
+            ];
+            return view("events/new")->with($data);
+        }
+        elseif(Auth::User()->can('admin_action') == true){
+            $data = [
+                'categories' => Category::pluck('category','id')
+            ];
+            return view("events/new")->with($data);
+        }
+        else {
+            return view("events/events", ["events"=>$categories]);
+        }
     }
 }
