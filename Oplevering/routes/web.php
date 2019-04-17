@@ -31,6 +31,11 @@ Route::get('/admin/organizers/{user}/edit', 'OrganizerController@edit')->name('o
 Route::patch('/admin/organizers/{user}/edit', 'OrganizerController@update')->name('organizers.update');
 Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('organizers.delete');
 
+Route::get('/admin/categorieen/', 'CategorieenController@index')->name('organizers.show');
+Route::get('/admin/categorieen/{user}/edit', 'CategorieenController@edit')->name('organizers.edit');
+Route::patch('/admin/categorieen/{user}/edit', 'CategorieenController@update')->name('organizers.update');
+Route::delete('/admin/categorieen/{user}', 'CategorieenController@delete')->name('organizers.delete');
+
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
 //    echo Auth::user()->can("participant_action")?"ja":"nee";
     $users = \App\User::whereHas('roles', function ($query) {
