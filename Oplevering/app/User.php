@@ -47,6 +47,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function getFavoriteCategoryAttribute()
+    {
+        return $this->categories->first();
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(
+            Category::class,
+            'user_categories',
+            'user_id',
+            'category_id'
+        );
+    }
+
     public function roles()
     {
         return $this->belongsToMany(Role::class, 'role_users');
