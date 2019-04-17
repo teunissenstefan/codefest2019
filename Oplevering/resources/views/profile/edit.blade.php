@@ -36,7 +36,7 @@
                                 </div>
                                 <div class="col-md-5">
                                     {{ Form::label('lastname', 'Achternaam*:') }}
-                                    {{ Form::text('lastname', null, array('class' => 'form-control '.($errors->has('lastname') ? ' is-invalid' : ''))) }}
+                                    {{ Form::text('lastname', null, array('class' => 'form-control '.($errors->has('lastname') ? ' is-invalid' : ''),'required')) }}
                                     @if ($errors->has('lastname'))
                                         <small class="text-danger" role="alert">
                                             <strong>{{ $errors->first('lastname') }}</strong>
@@ -48,7 +48,7 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     {{ Form::label('birthdate', 'Geboortedatum*:') }}
-                                    {{ Form::text('birthdate', null, array('class' => 'form-control '.($errors->has('birthdate') ? ' is-invalid' : ''))) }}
+                                    {{ Form::text('birthdate', null, array('class' => 'form-control '.($errors->has('birthdate') ? ' is-invalid' : ''),'required')) }}
                                     @if ($errors->has('birthdate'))
                                         <small class="text-danger" role="alert">
                                             <strong>{{ $errors->first('birthdate') }}</strong>
@@ -57,7 +57,7 @@
                                 </div>
                                 <div class="col-md-3">
                                     {{ Form::label('postal_code', 'Postcode*:') }}
-                                    {{ Form::text('postal_code', null, array('class' => 'form-control '.($errors->has('postal_code') ? ' is-invalid' : ''))) }}
+                                    {{ Form::text('postal_code', null, array('class' => 'form-control '.($errors->has('postal_code') ? ' is-invalid' : ''),'required')) }}
                                     @if ($errors->has('postal_code'))
                                         <small class="text-danger" role="alert">
                                             <strong>{{ $errors->first('postal_code') }}</strong>
@@ -66,7 +66,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     {{ Form::label('house_number', 'Huisnummer*:') }}
-                                    {{ Form::text('house_number', null, array('class' => 'form-control '.($errors->has('house_number') ? ' is-invalid' : ''))) }}
+                                    {{ Form::text('house_number', null, array('class' => 'form-control '.($errors->has('house_number') ? ' is-invalid' : ''),'required')) }}
                                     @if ($errors->has('house_number'))
                                         <small class="text-danger" role="alert">
                                             <strong>{{ $errors->first('house_number') }}</strong>
@@ -78,7 +78,7 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     {{ Form::label('city', 'Woonplaats*:') }}
-                                    {{ Form::text('city', null, array('class' => 'form-control '.($errors->has('city') ? ' is-invalid' : ''))) }}
+                                    {{ Form::text('city', null, array('class' => 'form-control '.($errors->has('city') ? ' is-invalid' : ''),'required')) }}
                                     @if ($errors->has('city'))
                                         <small class="text-danger" role="alert">
                                             <strong>{{ $errors->first('city') }}</strong>
@@ -87,7 +87,7 @@
                                 </div>
                                 <div class="col-md-6">
                                     {{ Form::label('street', 'Straat*:') }}
-                                    {{ Form::text('street', null, array('class' => 'form-control '.($errors->has('street') ? ' is-invalid' : ''))) }}
+                                    {{ Form::text('street', null, array('class' => 'form-control '.($errors->has('street') ? ' is-invalid' : ''),'required')) }}
                                     @if ($errors->has('street'))
                                         <small class="text-danger" role="alert">
                                             <strong>{{ $errors->first('street') }}</strong>
@@ -98,18 +98,12 @@
 
                             <div class="row">
                                 <div class="form-group col-6">
-                                    <label for="category">Favoriete categorie*:</label>
-                                    <select class="form-control" id="category">
-                                        <option value="">Selecteer een categorie</option>
-                                        <option value="2">Stefan</option>
-                                        <option value="3">Nino</option>
-                                        <option value="4">Levi</option>
-                                        <option value="5">Thomas</option>
-                                    </select>
+                                    {{ Form::label('category', 'Favoriete Categorie*:') }}
+                                    {!! Form::select('category', $categories, $favorite_category?$favorite_category->id:0, ['class' => 'form-control','required']) !!}
                                 </div>
                                 <div class="col-md-6">
                                     {{ Form::label('email', 'E-mailadres*:') }}
-                                    {{ Form::text('email', null, array('class' => 'form-control '.($errors->has('email') ? ' is-invalid' : ''))) }}
+                                    {{ Form::text('email', null, array('class' => 'form-control '.($errors->has('email') ? ' is-invalid' : ''),'required')) }}
                                     @if ($errors->has('email'))
                                         <small class="text-danger" role="alert">
                                             <strong>{{ $errors->first('email') }}</strong>
