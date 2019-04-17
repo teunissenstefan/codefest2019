@@ -20,6 +20,7 @@
                             <thead>
                             <tr>
                                 <th>Naam</th>
+                                <th>Aanmelder</th>
                                 <th>Postcode</th>
                                 <th>Straat</th>
                                 <th>Huisnummer</th>
@@ -31,11 +32,12 @@
                             <tbody>
                             @foreach($organizers as $organizer)
                                 <tr>
+                                    <td>{{$organizer->company->name}}</td>
                                     <td>{{$organizer->firstname}} {{$organizer->infix}} {{$organizer->lastname}}</td>
                                     <td>{{$organizer->postal_code}}</td>
                                     <td>{{$organizer->street}}</td>
                                     <td>{{$organizer->house_number}}</td>
-                                    <td>{{\Carbon\Carbon::parse($organizer->birthdate)->format("Y")}}</td>
+                                    <td>{{\Carbon\Carbon::parse($organizer->birthdate)->format("Y-m-d")}}</td>
                                     <td>{{$organizer->email}}</td>
                                     <td>
                                         {{Form::open(['method'  => 'DELETE', 'route' => ['organizers.delete', $organizer->id]])}}
@@ -49,6 +51,7 @@
                             <tfoot>
                             <tr>
                                 <th>Naam</th>
+                                <th>Aanmelder</th>
                                 <th>Postcode</th>
                                 <th>Straat</th>
                                 <th>Huisnummer</th>
@@ -73,6 +76,7 @@
                             <thead>
                             <tr>
                                 <th>Naam</th>
+                                <th>Aanmelder</th>
                                 <th>Datum aanmelding</th>
                                 <th>Acties</th>
                             </tr>
@@ -81,6 +85,7 @@
                             @foreach($unaccepted_organizers as $organizer)
                                 <tr>
                                     <td>{{$organizer->company->name}}</td>
+                                    <td>{{$organizer->firstname}} {{$organizer->infix}} {{$organizer->lastname}}</td>
                                     <td>{{$organizer->company->created_at}}</td>
                                     <td>
                                         {{Form::open(['method'  => 'DELETE', 'route' => ['organizers.deny', $organizer->id]])}}
@@ -94,6 +99,7 @@
                             <tfoot>
                             <tr>
                                 <th>Naam</th>
+                                <th>Aanmelder</th>
                                 <th>Datum aanmelding</th>
                                 <th>Acties</th>
                             </tr>

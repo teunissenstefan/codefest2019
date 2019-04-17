@@ -35,13 +35,13 @@
                                     <td>{{$participant->postal_code}}</td>
                                     <td>{{$participant->street}}</td>
                                     <td>{{$participant->house_number}}</td>
-                                    <td>{{\Carbon\Carbon::parse($participant->birthdate)->format("Y")}}</td>
+                                    <td>{{\Carbon\Carbon::parse($participant->birthdate)->format("Y-m-d")}}</td>
                                     <td>{{$participant->email}}</td>
                                     <td>
-                                        {{Form::open(['method'  => 'DELETE', 'route' => ['organizers.delete', $participant->id]])}}
+                                        {{Form::open(['method'  => 'DELETE', 'route' => ['participants.delete', $participant->id]])}}
                                         <input type="submit" class="btn btn-sm btn-danger float-right" value="Verwijder"/>
                                         {{Form::close()}}
-                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('organizers.edit',$participant->id)}}">Bewerk</a>
+                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('participants.edit',$participant->id)}}">Bewerk</a>
                                     </td>
                                 </tr>
                             @endforeach
