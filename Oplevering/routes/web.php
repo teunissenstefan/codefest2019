@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
 Route::get('/event/{eventId}', 'EventsController@event')->name('event');
+Route::delete('/event/remove/{event}', 'EventsController@remove')->name('event.remove');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
 Route::patch('/profiel/{user}', 'ProfileController@update')->name('profile.update');
@@ -32,9 +33,11 @@ Route::patch('/admin/organizers/{user}/edit', 'OrganizerController@update')->nam
 Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('organizers.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
+dd(Illuminate\Support\Facades\Auth::user()->events);
+
 //    echo Auth::user()->can("participant_action")?"ja":"nee";
-    $users = \App\User::whereHas('roles', function ($query) {
-        $query->where('slug', '=', 'participant');
-    })->get();//Alle participants verkrijgen
-    return $users;
+    // $users = \App\User::whereHas('roles', function ($query) {
+    //     $query->where('slug', '=', 'participant');
+    // })->get();//Alle participants verkrijgen
+    // return $users;
 });
