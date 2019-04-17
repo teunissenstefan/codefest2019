@@ -57,6 +57,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('addevent')}}">Voeg Event toe</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('categories.show')}}">Categorieen</a>
+                            </li>
                         @endif
                         
                         
