@@ -24,7 +24,7 @@
                     <br>
                     <br>
                     still after reading comments like this me and my group think its the best solution againt attacks from all kind of animals that are on earth.
-                    <img style="float: right;" src="IMG/EnvironmentExitlogo.jpeg" alt="environmentexitlogo" width="200" height="100">
+                    <img style="float: right;" src="{{asset('IMG/EnvironmentExitlogo.jpeg')}}" alt="environmentexitlogo" width="200" height="100">
                 </div>
 
 
