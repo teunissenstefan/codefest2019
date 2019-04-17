@@ -100,17 +100,7 @@
                                 </div>
 
                                 <div class="row">
-                                    <div class="form-group col-6">
-                                        <label for="category">Favoriete categorie</label>
-                                        <select class="form-control" id="category">
-                                            <option value="">Selecteer een categorie</option>
-                                            <option value="2">Stefan</option>
-                                            <option value="3">Nino</option>
-                                            <option value="4">Levi</option>
-                                            <option value="5">Thomas</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6">
+                                    <div class="col-md-12">
                                         {{ Form::label('email', 'E-mailadres:') }}
                                         {{ Form::text('email', null, array('class' => 'form-control '.($errors->has('email') ? ' is-invalid' : ''))) }}
                                         @if ($errors->has('email'))
