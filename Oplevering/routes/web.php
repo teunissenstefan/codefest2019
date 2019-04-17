@@ -22,7 +22,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/myevents', 'EventsController@myEvents')->name('myevents');
 Route::get('/events', 'EventsController@events')->name('events');
 
-Route::get('/profiel', 'ProfileController@show')->name('profile');
+Route::get('/profiel', 'ProfileController@edit')->name('profile');
 
 Route::get('/admin/organizers/', 'OrganizerController@index')->name('organizers.show');
 Route::delete('/admin/organizers/{user}', 'OrganizerController@delete')->name('organizers.delete');

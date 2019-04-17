@@ -9,13 +9,14 @@
 namespace App\Http\Controllers;
 
 
+use Illuminate\Support\Facades\Auth;
+
 class ProfileController extends Controller
 {
-    public function show()
+    public function edit()
     {
-
         $data = [
-            'organizers' => []
+            'user' => Auth::user()
         ];
         return view('profile.edit')->with($data);
     }

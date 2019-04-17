@@ -12,7 +12,6 @@
                                 {{ session('status') }}
                             </div>
                         @endif
-
                         <form>
                             <div class="row">
                                 <div class="form-group col-4">
