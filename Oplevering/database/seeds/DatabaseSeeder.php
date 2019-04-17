@@ -11,9 +11,6 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        $this->call(EventsTableSeeder::class);
-
-
         $admin = \App\Role::create([
             'name' => 'Admin',
             'slug' => 'admin',
@@ -66,6 +63,7 @@ class DatabaseSeeder extends Seeder
 
 
         $this->call(UserSeeder::class);
+        $this->call(EventsTableSeeder::class);
         $this->call(UserEventsSeeder::class);
         $this->call(CategorySeeder::class);
     }
