@@ -11,34 +11,38 @@ class EventsTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('go_vadis_events')->insert([
-            'name' => 'Test Event',
-            'description' => 'Test Event Description',
-            'orginazor' => '1',
-            'category' => 'Test Category(NTF)',
-            'date' => '02-03-2000(NTF)',
-            'postal_number' => '6666 NTF',
-            'house_number' => '666',
-            'street' => 'NeedToFix street',
-            'signed_up' => '666',
-            'max_signed_up' => '6666',
-            'finished' => '0',
-            'place_points' => '66/666, 1',
-        ]);
+        $event1 = new \App\GoVadisEvent();
+        $event1->name = "Test Event";
+        $event1->description = "Test Event Description";
+        $event1->orginazor = 1;
+        $event1->category = "Test Category(NTF)";
+        $event1->date = "02-03-2000(NTF)";
+        $event1->postal_number = "6666 NTF";
+        $event1->house_number = "666";
+        $event1->street = "Street";
+        $event1->signed_up = "666";
+        $event1->max_signed_up = "6666";
+        $event1->finished = "0";
+        $event1->place_points = "66/666, 1";
+        $event1->save();
 
-        DB::table('go_vadis_events')->insert([
-            'name' => 'Test Event2',
-            'description' => 'Test Event Description2',
-            'orginazor' => '1',
-            'category' => 'Test Category(NTF)2',
-            'date' => '02-03-2000(NTF)2',
-            'postal_number' => '6666 NTF2',
-            'house_number' => '6662',
-            'street' => 'NeedToFix street2',
-            'signed_up' => '6662',
-            'max_signed_up' => '66662',
-            'finished' => '1',
-            'place_points' => '66/666, 12',
-        ]);
+        $event1->categories()->attach(\App\Category::first());
+
+        $event2 = new \App\GoVadisEvent();
+        $event2->name = "Test Event 2";
+        $event2->description = "Test Event 2 Description";
+        $event2->orginazor = 1;
+        $event2->category = "Test Category(NTF)";
+        $event2->date = "02-03-2000(NTF)";
+        $event2->postal_number = "6666 NTF";
+        $event2->house_number = "666";
+        $event2->street = "Street";
+        $event2->signed_up = "666";
+        $event2->max_signed_up = "6666";
+        $event2->finished = "0";
+        $event2->place_points = "66/666, 1";
+        $event2->save();
+
+        $event2->categories()->attach(\App\Category::first());
     }
 }
