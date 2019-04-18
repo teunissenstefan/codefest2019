@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\User;
+use App\UserPoints;
 use Illuminate\Http\Request;
 use App\GoVadisEvent;
 use App\UserEvents;
@@ -146,6 +147,42 @@ class EventsController extends Controller
             'selected_category' => $event->categories()->first()->id
         ];
         return view('events.eventedit')->with($data);
+    }
+
+    public function close(GoVadisEvent $event, Request $request)
+    {
+        $data = [
+            'event' => $event
+        ];
+        return view('events.eventclose')->with($data);
+    }
+
+    public function finalize(GoVadisEvent $event, Request $request)
+    {
+        foreach(Input::except(['_token','_method']) as $name => $item){
+            if($item!=null){
+
+                $plaats = $name;
+                $aantal_deelnemers = count($event->participating_users);
+                $c = $aantal_deelnemers>1000? 1000 : $aantal_deelnemers ;
+
+                $d = $c - ($c / ($aantal_deelnemers * 0.5))*($plaats-1);
+
+                $user = User::find($item);
+                $user->points += $d;
+                if($user->points<=0){
+                    $user->points = 0;
+                }
+                $user->save();
+
+            }
+        }
+        $data = [
+            'event' => $event
+        ];
+
+        $request->session()->flash('status', 'Event aangepast!');
+        return redirect(route('events.index'));
     }
 
     public function update(GoVadisEvent $event, Request $request)
