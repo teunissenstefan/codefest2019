@@ -178,12 +178,13 @@ class EventsController extends Controller
 
                 }
             }
+            $event->participating_users()->detach();
             $data = [
                 'event' => $event
             ];
 
             $request->session()->flash('status', 'Event aangepast!');
-            return redirect(route('events.index'));
+            return redirect(route('events'));
         }
     }
 
