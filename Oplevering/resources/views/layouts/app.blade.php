@@ -76,9 +76,12 @@
                         @else
                         
                             @can("admin_action")
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
-                                </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('organizers.show')}}">Organisatoren</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{route('participants.show')}}">Deelnemers</a>
+                                    </li>
                             @endcan
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('logout')}}"

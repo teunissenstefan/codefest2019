@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cd8dae83-460d-47e1-864f-115c82f8c3a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,30 +43,30 @@
           <entry key="env" value="3" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
-          <entry key="php" value="191" />
+          <entry key="php" value="193" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="3" />
-          <entry key="Blade" value="48" />
+          <entry key="Blade" value="49" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="143" />
+          <entry key="PHP" value="144" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="52" />
           <entry key="json" value="2" />
-          <entry key="php" value="10627" />
+          <entry key="php" value="10639" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="52" />
-          <entry key="Blade" value="4371" />
+          <entry key="Blade" value="4381" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="6256" />
+          <entry key="PHP" value="6258" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -83,8 +81,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="43" column="45" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="45" />
+            <state relative-caret-position="587">
+              <caret line="52" column="90" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="90" />
             </state>
           </provider>
         </entry>
@@ -95,6 +93,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="688">
+              <caret line="82" column="92" selection-start-line="82" selection-start-column="92" selection-end-line="82" selection-end-column="92" />
+              <folding>
+                <element signature="n#style#0;n#stop#0;n#linearGradient#0;n#defs#0;n#svg#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#stop#1;n#linearGradient#0;n#defs#0;n#svg#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProfileController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="672">
@@ -107,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="448">
-              <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
+              <caret line="164" selection-start-line="164" selection-end-line="164" />
             </state>
           </provider>
         </entry>
@@ -116,7 +127,7 @@
         <entry file="file://$PROJECT_DIR$/resources/views/events/event.blade.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="592">
-              <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+              <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -124,8 +135,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/EventsTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="448">
-              <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+            <state relative-caret-position="288">
+              <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -135,15 +146,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="693">
               <caret line="50" column="39" selection-start-line="50" selection-start-column="20" selection-end-line="50" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/events/eventclose.blade.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="51" selection-start-line="51" selection-end-line="51" />
             </state>
           </provider>
         </entry>
@@ -161,7 +163,7 @@
         <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="320">
-              <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+              <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
             </state>
           </provider>
         </entry>
@@ -214,9 +216,7 @@
         <option value="$PROJECT_DIR$/database/seeds/UserSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
         <option value="$PROJECT_DIR$/app/Notifications/EventSignedUpNotification.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_18_055952_create_user_points_table.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/resources/views/events/eventclose.blade.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
@@ -225,6 +225,8 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ProfileController.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
       </list>
     </option>
   </component>
@@ -550,7 +552,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="app.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;web.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/routes/web.php&#10;verify.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/verify.blade.php&#10;eventcontrol&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;govadiseve&#9;null&#9;null&#10;events/events.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/events/events.blade.php&#10;eventscontroller&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;login.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/login.blade.php&#10;.env&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/.env&#10;app.b&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;app.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;registercon&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/Auth/RegisterController.php&#10;organiz&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/OrganizerController.php&#10;app.bla&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;profi&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/profile&#10;company.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Company.php&#10;user.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/User.php&#10;register&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;home.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/home.blade.php&#10;register.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;events&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;event&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;eventscon&#9;null&#9;null&#10;database&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/database/seeds/DatabaseSeeder.php&#10;authserv&#9;null&#9;null&#10;permission&#9;null&#9;null&#10;role.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Role.php" />
+    <property name="SearchEverywhereHistoryKey" value="app.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;web.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/routes/web.php&#10;app.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;verify.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/verify.blade.php&#10;eventcontrol&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;govadiseve&#9;null&#9;null&#10;events/events.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/events/events.blade.php&#10;eventscontroller&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;login.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/login.blade.php&#10;.env&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/.env&#10;app.b&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;registercon&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/Auth/RegisterController.php&#10;organiz&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/OrganizerController.php&#10;app.bla&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;profi&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/profile&#10;company.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Company.php&#10;user.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/User.php&#10;register&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;home.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/home.blade.php&#10;register.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;events&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;event&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;eventscon&#9;null&#9;null&#10;database&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/database/seeds/DatabaseSeeder.php&#10;authserv&#9;null&#9;null&#10;permission&#9;null&#9;null&#10;role.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Role.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -580,12 +582,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555488042117</updated>
       <workItem from="1555488043233" duration="12840000" />
-      <workItem from="1555501112570" duration="49610000" />
+      <workItem from="1555501112570" duration="51088000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62450000" />
+    <option name="totallyTimeSpent" value="63928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="-8" width="1902" height="1044" extended-state="6" />
@@ -817,13 +819,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="60" column="40" lean-forward="true" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="256">
@@ -910,17 +905,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="192" column="65" lean-forward="true" selection-start-line="192" selection-start-column="65" selection-end-line="192" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#stop#0;n#linearGradient#0;n#defs#0;n#svg#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#stop#1;n#linearGradient#0;n#defs#0;n#svg#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/UserCategorySeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -935,17 +919,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/EventsTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="448">
-          <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/events/event.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="592">
-          <caret line="37" column="33" lean-forward="true" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
         </state>
       </provider>
     </entry>
@@ -959,14 +936,7 @@
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="164" lean-forward="true" selection-start-line="164" selection-end-line="164" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="43" column="45" selection-start-line="43" selection-start-column="28" selection-end-line="43" selection-end-column="45" />
+          <caret line="164" selection-start-line="164" selection-end-line="164" />
         </state>
       </provider>
     </entry>
@@ -976,7 +946,7 @@
     <entry file="file://$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
-          <caret line="22" column="28" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
+          <caret line="22" column="28" lean-forward="true" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="28" />
         </state>
       </provider>
     </entry>
@@ -984,6 +954,38 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="672">
           <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-837">
+          <caret line="39" column="74" lean-forward="true" selection-start-line="39" selection-start-column="74" selection-end-line="39" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/EventsTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="18" column="42" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="52" column="90" selection-start-line="52" selection-start-column="73" selection-end-line="52" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="688">
+          <caret line="82" column="92" selection-start-line="82" selection-start-column="92" selection-end-line="82" selection-end-column="92" />
+          <folding>
+            <element signature="n#style#0;n#stop#0;n#linearGradient#0;n#defs#0;n#svg#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#stop#1;n#linearGradient#0;n#defs#0;n#svg#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
