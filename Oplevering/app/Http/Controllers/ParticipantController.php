@@ -16,7 +16,7 @@ class ParticipantController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware('auth','verified');
         $this->middleware('can:admin_action');
     }
 
