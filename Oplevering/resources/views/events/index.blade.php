@@ -46,7 +46,7 @@
                             <tfoot>
                             <tr>
                                 <th>Naam</th>
-                                <th>Organezir</th>
+                                <th>Organizer</th>
                                 <th>Categorie</th>
                                 <th>Datum</th>
                                 <th>Locatie</th>
