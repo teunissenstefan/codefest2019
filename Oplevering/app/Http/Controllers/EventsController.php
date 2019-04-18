@@ -97,13 +97,22 @@ class EventsController extends Controller
         return view("events/eventedit", ["event"=>$eventId]);
     }
 
-    public function eventSign(GoVadisEvent $eventId, Request $request)
+    public function eventSign(GoVadisEvent $event, Request $request)
     {
-        $events = GoVadisEvent::find($eventId['id']);
-        $user = Auth::user();
-        $user->events()->attach($events);
+        if (! $event->participating_users->contains(Auth::user())) {
+            $event->participating_users()->attach(Auth::user());
+        }
         $request->session()->flash('status', 'Aangemeld!');
-        return redirect(route('event', ["event"=>$eventId['id']]));
+        return redirect(route('event', ["event"=>$event->id]));
+    }
+
+    public function eventUnsign(GoVadisEvent $event, Request $request)
+    {
+        if ($event->participating_users->contains(Auth::user())) {
+            $event->participating_users()->detach(Auth::user());
+        }
+        $request->session()->flash('status', 'Afgemeld!');
+        return redirect(route('event', ["event"=>$event->id]));
     }
 
     public function new()

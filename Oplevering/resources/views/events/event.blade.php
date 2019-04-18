@@ -39,7 +39,11 @@
                         </tbody>
                     </table>
                     @if(Gate::check('participant_action'))
-                        <a class="nav-link" href="{{route('eventsign',$event->id)}}"><button type="button" class="btn btn-default btn-sm"><h3>Meld Je Aan</h3></button></a>
+                        @if($event->participating_users->contains(Auth::user()))
+                            <a class="nav-link" href="{{route('eventunsign',$event->id)}}"><button type="button" class="btn btn-default btn-sm">Meld Je Af</button></a>
+                        @else
+                            <a class="nav-link" href="{{route('eventsign',$event->id)}}"><button type="button" class="btn btn-default btn-sm">Meld Je Aan</button></a>
+                        @endif
                     @endif
                 </div>
             </div>
