@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\GoVadisEvent;
 use App\UserEvents;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Input;
 
 class EventsController extends Controller
 {
@@ -140,7 +141,8 @@ class EventsController extends Controller
     {
         $data = [
             'event' => $event,
-            'categories' => Category::pluck('category', 'id')
+            'categories' => Category::pluck('category', 'id'),
+            'selected_category' => $event->categories()->first()->id
         ];
         return view('events.eventedit')->with($data);
     }
@@ -148,7 +150,13 @@ class EventsController extends Controller
     public function update(GoVadisEvent $event, Request $request)
     {
         $event->fill($request->all());
-        $event->categories()->sync(Category::find($event->get('category')));
+
+        if(count($event->categories)>0){
+            $event->categories()->detach();
+        }
+        $category = Category::find(Input::get('category'));
+        $event->categories()->attach($category);
+
         $event->save();
         $data = [
             'event' => $event

@@ -42,7 +42,7 @@
                         <div class="row">
                             <div class="form-group col-6">
                                 {{ Form::label('category', 'Favoriete Categorie*:') }}
-                                {!! Form::select('category', $categories, null, ['class' => 'form-control','required']) !!}
+                                {!! Form::select('category', $categories, $selected_category, ['class' => 'form-control','required']) !!}
                             </div>
                             <div class="col-md-3">
                                 {{ Form::label('date', 'Datum*:') }}
