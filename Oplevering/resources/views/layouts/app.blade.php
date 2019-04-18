@@ -51,6 +51,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{route('myevents')}}">MyEvents</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{route('leaderboard')}}">Ranglijst</a>
+                            </li>
                         @endif  
 
                         @if(Gate::check('admin_action') || Gate::check('organizer_action'))

@@ -41,6 +41,8 @@ Route::post('/events/{event}/close', 'EventsController@finalize')->name('events.
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
 Route::patch('/profiel/{user}', 'ProfileController@update')->name('profile.update');
 
+Route::get('/leaderboard', 'ProfileController@leaderboard')->name('leaderboard');
+
 Route::get('/admin/organizers/', 'OrganizerController@index')->name('organizers.show');
 Route::get('/admin/organizers/{user}/edit', 'OrganizerController@edit')->name('organizers.edit');
 Route::patch('/admin/organizers/{user}/edit', 'OrganizerController@update')->name('organizers.update');

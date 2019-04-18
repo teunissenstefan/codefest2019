@@ -48,6 +48,10 @@ class ProfileController extends Controller
         return redirect(route('profile'));
     }
 
+    public function leaderboard() {
+        $users = User::orderBy('points', 'desc')->get();
 
+        return view("profile/leaderboard", ["users"=>$users]);
+    }
 
 }
