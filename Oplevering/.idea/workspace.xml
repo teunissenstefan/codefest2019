@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="cd8dae83-460d-47e1-864f-115c82f8c3a4" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserCategorySeeder.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/events/event.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/events/event.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -45,13 +44,13 @@
           <entry key="env" value="3" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
-          <entry key="php" value="188" />
+          <entry key="php" value="189" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key=".env file" value="3" />
-          <entry key="Blade" value="46" />
+          <entry key="Blade" value="47" />
           <entry key="JSON" value="2" />
           <entry key="PHP" value="142" />
         </counts>
@@ -60,15 +59,15 @@
         <counts>
           <entry key="env" value="52" />
           <entry key="json" value="2" />
-          <entry key="php" value="10438" />
+          <entry key="php" value="10583" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="52" />
-          <entry key="Blade" value="4337" />
+          <entry key="Blade" value="4371" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="6101" />
+          <entry key="PHP" value="6212" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -83,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="363">
-              <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
+            <state relative-caret-position="587">
+              <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="81" />
             </state>
           </provider>
         </entry>
@@ -92,17 +91,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="93" selection-end-column="87" />
+            <state relative-caret-position="784">
+              <caret line="185" column="51" selection-start-line="185" selection-start-column="51" selection-end-line="185" selection-end-column="51" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/events/event.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="784">
+              <caret line="49" column="164" selection-start-line="49" selection-start-column="164" selection-end-line="49" selection-end-column="164" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/EventsTableSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="448">
-              <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+              <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -185,7 +193,6 @@
         <option value="$PROJECT_DIR$/database/migrations/2019_04_18_024706_create_event_users_table.php" />
         <option value="$PROJECT_DIR$/app/GoVadisEvent.php" />
         <option value="$PROJECT_DIR$/resources/views/events/index.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/events/event.blade.php" />
         <option value="$PROJECT_DIR$/app/Notifications/CustomVerifyEmailNotification.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php" />
@@ -199,9 +206,10 @@
         <option value="$PROJECT_DIR$/resources/views/events/eventclose.blade.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
         <option value="$PROJECT_DIR$/database/seeds/EventsTableSeeder.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
+        <option value="$PROJECT_DIR$/resources/views/events/event.blade.php" />
       </list>
     </option>
   </component>
@@ -557,12 +565,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555488042117</updated>
       <workItem from="1555488043233" duration="12840000" />
-      <workItem from="1555501112570" duration="46895000" />
+      <workItem from="1555501112570" duration="47645000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59735000" />
+    <option name="totallyTimeSpent" value="60485000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="-8" width="1902" height="1044" extended-state="6" />
@@ -849,13 +857,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/events/event.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="832">
-          <caret line="52" column="11" lean-forward="true" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/UserPoints.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="160">
@@ -881,13 +882,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="667">
           <caret line="94" column="30" lean-forward="true" selection-start-line="94" selection-start-column="30" selection-end-line="96" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="38" column="11" selection-start-line="38" selection-start-column="11" selection-end-line="38" selection-end-column="11" />
         </state>
       </provider>
     </entry>
@@ -947,13 +941,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="91" column="46" selection-start-line="91" selection-start-column="46" selection-end-line="93" selection-end-column="87" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="763">
@@ -964,7 +951,28 @@
     <entry file="file://$PROJECT_DIR$/database/seeds/EventsTableSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="448">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+          <caret line="28" column="62" lean-forward="true" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="185" column="51" selection-start-line="185" selection-start-column="51" selection-end-line="185" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="587">
+          <caret line="37" column="69" selection-start-line="37" selection-start-column="69" selection-end-line="37" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/events/event.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="784">
+          <caret line="49" column="164" selection-start-line="49" selection-start-column="164" selection-end-line="49" selection-end-column="164" />
         </state>
       </provider>
     </entry>

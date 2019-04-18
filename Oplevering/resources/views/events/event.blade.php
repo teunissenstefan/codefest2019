@@ -45,6 +45,10 @@
                             <a class="nav-link" href="{{route('eventsign',$event->id)}}"><button type="button" class="btn btn-default btn-sm">Meld Je Aan</button></a>
                         @endif
                     @endif
+
+                    @if(Gate::check('organizer_action'))
+                            <a class="nav-link" href="{{route('events.close',$event->id)}}"><button type="button" class="btn btn-default btn-sm">Evenement Afsluiten</button></a>
+                    @endif
                 </div>
             </div>
         </div>
