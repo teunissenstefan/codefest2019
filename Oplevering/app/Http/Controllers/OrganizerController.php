@@ -17,7 +17,7 @@ class OrganizerController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth','verified');
+        $this->middleware(['auth','verified']);
         $this->middleware('can:admin_action');
     }
 
