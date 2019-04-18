@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\User;
 use Illuminate\Http\Request;
 use App\GoVadisEvent;
 use App\UserEvents;
@@ -87,6 +88,8 @@ class EventsController extends Controller
 
         $user = Auth::user();
         $user->events()->attach($goVadisEvent);
+        $goVadisEvent->categories()->detach();
+        $goVadisEvent->categories()->attach(Category::find($request->get('category')));
 
         $request->session()->flash('status', 'Event toegevoegd!');
         return redirect(route('events.index'));
@@ -109,21 +112,40 @@ class EventsController extends Controller
     public function new()
     {
         $categories = GoVadisEvent::all();
-        if(Auth::User()->can('organizer_action') == true){
+        if (Auth::User()->can('organizer_action') == true) {
             $data = [
-                'categories' => Category::pluck('category','id')
-            ];
-            //$testOrganizer->roles()->attach(\App\Role::where('slug','organizer-pre-accept')->first());
-            return view("events/new")->with($data);
-        }
-        elseif(Auth::User()->can('admin_action') == true){
-            $data = [
-                'categories' => Category::pluck('category','id')
+                'categories' => Category::pluck('category', 'id')
             ];
             return view("events/new")->with($data);
+        } elseif (Auth::User()->can('admin_action') == true) {
+            $data = [
+                'categories' => Category::pluck('category', 'id')
+            ];
+            return view("events/new")->with($data);
+        } else {
+            return view("events/events", ["events" => $categories]);
         }
-        else {
-            return view("events/events", ["events"=>$categories]);
-        }
+    }
+
+    public function edit(GoVadisEvent $event, Request $request)
+    {
+        $data = [
+            'event' => $event,
+            'categories' => Category::pluck('category', 'id')
+        ];
+        return view('events.eventedit')->with($data);
+    }
+
+    public function update(GoVadisEvent $event, Request $request)
+    {
+        $event->fill($request->all());
+        $event->categories()->sync(Category::find($event->get('category')));
+        $event->save();
+        $data = [
+            'event' => $event
+        ];
+
+        $request->session()->flash('status', 'Event aangepast!');
+        return redirect(route('events.index'));
     }
 }

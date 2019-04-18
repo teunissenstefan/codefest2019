@@ -33,4 +33,19 @@ class GoVadisEvent extends Model
             'user_id'
         );
     }
+
+    public function getCategoryAttribute()
+    {
+        return $this->categories()->first();
+    }
+
+    public function categories()
+    {
+        return $this->belongsToMany(
+            Category::class,
+            'event_categories',
+            'event_id',
+            'category_id'
+        );
+    }
 }

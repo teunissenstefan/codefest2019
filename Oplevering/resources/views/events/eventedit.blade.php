@@ -15,8 +15,8 @@
                             </div>
                         @endif
 
-                        {{Form::model(null, array('route' => array('event.add')))}}
-                        @method('POST')
+                        {{Form::model($event, array('route' => array('events.update', 'event'=>$event)))}}
+                        @method('PATCH')
                         @csrf
                         <div class="row">
                             <div class="col-md-6">

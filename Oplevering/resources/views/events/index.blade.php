@@ -30,15 +30,15 @@
                             @foreach($events as $event)
                                 <tr>
                                     <td>{{$event->name}}</td>
-                                    <td>{{$event->user['firstname']}}</td>
-                                    <td>{{$event->category}}</td>
+                                    <td>{{$event->user->firstname}}</td>
+                                    <td>{{$event->category->category}}</td>
                                     <td>{{$event->date}}</td>
                                     <td>{{$event->street}} {{$event->house_number}}</td>
                                     <td>
                                         {{Form::open(['method'  => 'DELETE', 'route' => ['categories.delete', $event->id]])}}
                                         <input type="submit" class="btn btn-sm btn-danger float-right" value="Verwijder"/>
                                         {{Form::close()}}
-                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('categories.edit',$event->id)}}">Bewerk</a>
+                                        <a class="btn btn-sm btn-warning float-right mr-1" href="{{route('events.edit',$event->id)}}">Bewerk</a>
                                     </td>
                                 </tr>
                             @endforeach

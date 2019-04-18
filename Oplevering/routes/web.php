@@ -32,8 +32,8 @@ Route::get('/events/index', 'EventsController@index')->name('events.index');
 Route::get('/events/new', 'EventsController@new')->name('events.new');
 Route::get('/events/insert', 'EventsController@insert')->name('events.insert');
 Route::post('/events/addevent', 'EventsController@eventStore')->name('event.add');
-Route::get('/events/edit/{category}/edit', 'EventsController@edit')->name('events.edit');
-Route::patch('/events/update/{category}/edit', 'EventsController@update')->name('events.update');
+Route::get('/events/edit/{event}', 'EventsController@edit')->name('events.edit');
+Route::patch('/events/update/{event}/edit', 'EventsController@update')->name('events.update');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
 Route::patch('/profiel/{user}', 'ProfileController@update')->name('profile.update');
@@ -59,7 +59,7 @@ Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
     $event = GoVadisEvent::first();
-    dd($event->user);
+    dd($event->category);
 //    $organizers = \App\User::whereHas('roles', function ($query) {
 //        $query->where('slug', '=', 'organizer');
 //    })->whereHas('company', function ($query) {
