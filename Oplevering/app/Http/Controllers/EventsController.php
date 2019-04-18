@@ -61,7 +61,7 @@ class EventsController extends Controller
     {
         $event->delete();
         $request->session()->flash('status', 'Event verwijderd!');
-        return redirect(route('myevents'));
+        return redirect(route('events.index'));
     }
 
     public function addEvent()
