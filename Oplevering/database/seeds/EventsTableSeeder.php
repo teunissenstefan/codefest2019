@@ -14,7 +14,7 @@ class EventsTableSeeder extends Seeder
         DB::table('go_vadis_events')->insert([
             'name' => 'Test Event',
             'description' => 'Test Event Description',
-            'orginazor' => '666',
+            'orginazor' => '1',
             'category' => 'Test Category(NTF)',
             'date' => '02-03-2000(NTF)',
             'postal_number' => '6666 NTF',
@@ -29,7 +29,7 @@ class EventsTableSeeder extends Seeder
         DB::table('go_vadis_events')->insert([
             'name' => 'Test Event2',
             'description' => 'Test Event Description2',
-            'orginazor' => '6662',
+            'orginazor' => '1',
             'category' => 'Test Category(NTF)2',
             'date' => '02-03-2000(NTF)2',
             'postal_number' => '6666 NTF2',
