@@ -165,4 +165,5 @@ class EventsController extends Controller
         $request->session()->flash('status', 'Event aangepast!');
         return redirect(route('events.index'));
     }
+
 }
