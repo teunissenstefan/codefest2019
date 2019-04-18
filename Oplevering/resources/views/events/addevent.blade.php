@@ -5,8 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">Organisator Bewerken <a class="btn btn-sm btn-success float-right"
-                                                                      href="{{url()->previous()}}">Terug</a></div>
+                    <div class="card-header">Organisator Bewerken </div>
 
                     <div class="card-body">
                         @if (session('status'))
