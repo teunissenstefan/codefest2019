@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('lastname');
             $table->string('postal_code');
             $table->string('house_number');
+            $table->string('points')->default(0);
             $table->string('street');
             $table->string('city');
             $table->dateTime('birthdate');

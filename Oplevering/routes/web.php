@@ -35,6 +35,8 @@ Route::get('/events/insert', 'EventsController@insert')->name('events.insert');
 Route::post('/events/addevent', 'EventsController@eventStore')->name('event.add');
 Route::get('/events/edit/{event}', 'EventsController@edit')->name('events.edit');
 Route::patch('/events/update/{event}/edit', 'EventsController@update')->name('events.update');
+Route::get('/events/{event}/close', 'EventsController@close')->name('events.close');
+Route::post('/events/{event}/close', 'EventsController@finalize')->name('events.finalize');
 
 Route::get('/profiel', 'ProfileController@edit')->name('profile');
 Route::patch('/profiel/{user}', 'ProfileController@update')->name('profile.update');
@@ -59,19 +61,7 @@ Route::post('admin/categorieen/new', 'CategorieenController@insert')->name('cate
 Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
-//    $organizers = \App\User::whereHas('roles', function ($query) {
-//        $query->where('slug', '=', 'organizer');
-//    })->whereHas('company', function ($query) {
-//        $query->where('accepted', '=', '0');
-//    })->get();
-//    return $organizers;
-//dd(Illuminate\Support\Facades\Auth::user()->events);
-
-//    echo Auth::user()->can("participant_action")?"ja":"nee";
-    // $users = \App\User::whereHas('roles', function ($query) {
-    //     $query->where('slug', '=', 'participant');
-    // })->get();//Alle participants verkrijgen
-    // return $users;
+    return \Illuminate\Support\Facades\Auth::user()->points;
 });
 
 Route::get('nothingfishyhere', function(){
