@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd8dae83-460d-47e1-864f-115c82f8c3a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/verify.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -43,7 +43,7 @@
           <entry key="env" value="3" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
-          <entry key="php" value="171" />
+          <entry key="php" value="172" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -51,14 +51,14 @@
           <entry key=".env file" value="3" />
           <entry key="Blade" value="41" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="130" />
+          <entry key="PHP" value="131" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="52" />
           <entry key="json" value="2" />
-          <entry key="php" value="8685" />
+          <entry key="php" value="8696" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -66,7 +66,7 @@
           <entry key=".env file" value="52" />
           <entry key="Blade" value="3894" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="4791" />
+          <entry key="PHP" value="4802" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -81,8 +81,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="571">
-              <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
+            <state relative-caret-position="539">
+              <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -146,7 +155,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Notifications/EventSignedUpNotification.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="651">
@@ -224,11 +233,11 @@
         <option value="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CategorieenController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/database/seeds/UserSeeder.php" />
         <option value="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/app/Notifications/EventSignedUpNotification.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       </list>
     </option>
   </component>
@@ -584,12 +593,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555488042117</updated>
       <workItem from="1555488043233" duration="12840000" />
-      <workItem from="1555501112570" duration="39207000" />
+      <workItem from="1555501112570" duration="39854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52047000" />
+    <option name="totallyTimeSpent" value="52694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="-8" width="1902" height="1044" extended-state="6" />
@@ -880,13 +889,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -979,13 +981,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="571">
-          <caret line="63" column="73" selection-start-line="63" selection-start-column="73" selection-end-line="63" selection-end-column="73" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Notifications/EventSignedUpNotification.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
@@ -993,6 +988,20 @@
           <folding>
             <element signature="e#37#58#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
         </state>
       </provider>
     </entry>
