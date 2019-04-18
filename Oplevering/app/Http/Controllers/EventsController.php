@@ -159,30 +159,32 @@ class EventsController extends Controller
 
     public function finalize(GoVadisEvent $event, Request $request)
     {
-        foreach(Input::except(['_token','_method']) as $name => $item){
-            if($item!=null){
+        if(Auth::user()->can('admin_action') || Auth::user()->can('participant_action')){
+            foreach(Input::except(['_token','_method']) as $name => $item){
+                if($item!=null){
 
-                $plaats = $name;
-                $aantal_deelnemers = count($event->participating_users);
-                $c = $aantal_deelnemers>1000? 1000 : $aantal_deelnemers ;
+                    $plaats = $name;
+                    $aantal_deelnemers = count($event->participating_users);
+                    $c = $aantal_deelnemers>1000? 1000 : $aantal_deelnemers ;
 
-                $d = $c - ($c / ($aantal_deelnemers * 0.5))*($plaats-1);
+                    $d = $c - ($c / ($aantal_deelnemers * 0.5))*($plaats-1);
 
-                $user = User::find($item);
-                $user->points += $d;
-                if($user->points<=0){
-                    $user->points = 0;
+                    $user = User::find($item);
+                    $user->points += $d;
+                    if($user->points<=0){
+                        $user->points = 0;
+                    }
+                    $user->save();
+
                 }
-                $user->save();
-
             }
-        }
-        $data = [
-            'event' => $event
-        ];
+            $data = [
+                'event' => $event
+            ];
 
-        $request->session()->flash('status', 'Event aangepast!');
-        return redirect(route('events.index'));
+            $request->session()->flash('status', 'Event aangepast!');
+            return redirect(route('events.index'));
+        }
     }
 
     public function update(GoVadisEvent $event, Request $request)
