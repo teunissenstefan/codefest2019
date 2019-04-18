@@ -48,4 +48,13 @@ class GoVadisEvent extends Model
             'category_id'
         );
     }
+    public function participating_users()
+    {
+        return $this->belongsToMany(
+            User::class,
+            'event_users',
+            'event_id',
+            'user_id'
+        );
+    }
 }

@@ -25,7 +25,8 @@ Route::get('/events', 'EventsController@events')->name('events');
 Route::get('/event/{event}', 'EventsController@event')->name('event');
 Route::get('/addevent', 'EventsController@addEvent')->name('addevent');
 Route::get('/eventedit/{eventId}', 'EventsController@eventEdit')->name('eventedit');
-Route::get('/eventsign/{eventId}', 'EventsController@eventSign')->name('eventsign');
+Route::get('/eventsign/{event}', 'EventsController@eventSign')->name('eventsign');
+Route::get('/eventunsign/{event}', 'EventsController@eventUnsign')->name('eventunsign');
 Route::delete('/event/remove/{event}', 'EventsController@remove')->name('event.remove');
 
 Route::get('/events/index', 'EventsController@index')->name('events.index');
@@ -59,7 +60,7 @@ Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
     $event = GoVadisEvent::first();
-    dd($event->category);
+    dd($event->participating_users);
 //    $organizers = \App\User::whereHas('roles', function ($query) {
 //        $query->where('slug', '=', 'organizer');
 //    })->whereHas('company', function ($query) {
