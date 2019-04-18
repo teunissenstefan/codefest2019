@@ -30,7 +30,7 @@
                             @foreach($events as $event)
                                 <tr>
                                     <td>{{$event->name}}</td>
-                                    <td>{{$event->orginazor}}</td>
+                                    <td>{{$event->user['firstname']}}</td>
                                     <td>{{$event->category}}</td>
                                     <td>{{$event->date}}</td>
                                     <td>{{$event->street}} {{$event->house_number}}</td>

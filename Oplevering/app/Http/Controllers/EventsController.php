@@ -84,6 +84,10 @@ class EventsController extends Controller
         $goVadisEvent->finished = 0;
         $goVadisEvent->place_points = 'na';
         $goVadisEvent->save();
+
+        $user = Auth::user();
+        $user->events()->attach($goVadisEvent);
+
         $request->session()->flash('status', 'Event toegevoegd!');
         return redirect(route('events.index'));
     }
@@ -109,6 +113,7 @@ class EventsController extends Controller
             $data = [
                 'categories' => Category::pluck('category','id')
             ];
+            //$testOrganizer->roles()->attach(\App\Role::where('slug','organizer-pre-accept')->first());
             return view("events/new")->with($data);
         }
         elseif(Auth::User()->can('admin_action') == true){
