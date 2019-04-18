@@ -20,6 +20,7 @@ class UserSeeder extends Seeder
             'street' => 'Adminstraat',
             'city' => 'Teststad',
             'birthdate' => '1969-04-17',
+            'email_verified_at' => \Carbon\Carbon::now(),
             'email' => 'admin@admin.admin',
             'password' => \Illuminate\Support\Facades\Hash::make('admin'),
         ]);
@@ -34,6 +35,7 @@ class UserSeeder extends Seeder
             'street' => 'Adminstraat',
             'city' => 'Teststad',
             'birthdate' => '1969-04-17',
+            'email_verified_at' => \Carbon\Carbon::now(),
             'email' => 'test@bedrijf.com',
             'password' => \Illuminate\Support\Facades\Hash::make('admin'),
         ]);
@@ -57,6 +59,7 @@ class UserSeeder extends Seeder
             'street' => 'Adminstraat',
             'city' => 'Teststad',
             'birthdate' => '1969-04-17',
+            'email_verified_at' => \Carbon\Carbon::now(),
             'email' => 'test@gmail.com',
             'password' => \Illuminate\Support\Facades\Hash::make('admin'),
         ]);
