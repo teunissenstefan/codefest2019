@@ -30,7 +30,7 @@
                                 <td>@php echo $event['name']; @endphp</th>
                                 <td>@php echo $event['description']; @endphp</th>
                                 <td>@php echo $event->user->firstname; @endphp</th>
-                                <td>@php echo $event['category']; @endphp</th>
+                                <td>@php echo $event->category->category; @endphp</th>
                                 <td>@php echo $event['date']; @endphp</th>
                                 <td>@php echo $event['postal_code']; @endphp</th>
                                 <td>@php echo $event['house_number']; @endphp</th>
