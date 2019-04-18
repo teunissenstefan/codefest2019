@@ -59,8 +59,6 @@ Route::post('admin/categorieen/new', 'CategorieenController@insert')->name('cate
 Route::delete('/admin/categorieen/{category}', 'CategorieenController@delete')->name('categories.delete');
 
 Route::get('/foo', function (\Illuminate\Http\Request $request) {
-    $event = GoVadisEvent::first();
-    dd($event->participating_users);
 //    $organizers = \App\User::whereHas('roles', function ($query) {
 //        $query->where('slug', '=', 'organizer');
 //    })->whereHas('company', function ($query) {

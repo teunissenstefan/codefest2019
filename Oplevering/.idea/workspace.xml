@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cd8dae83-460d-47e1-864f-115c82f8c3a4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/database/seeds/UserSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/UserSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -42,7 +43,7 @@
           <entry key="env" value="3" />
           <entry key="json" value="1" />
           <entry key="lock" value="1" />
-          <entry key="php" value="167" />
+          <entry key="php" value="172" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -50,22 +51,22 @@
           <entry key=".env file" value="3" />
           <entry key="Blade" value="41" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="126" />
+          <entry key="PHP" value="131" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="env" value="52" />
           <entry key="json" value="2" />
-          <entry key="php" value="8351" />
+          <entry key="php" value="8696" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key=".env file" value="52" />
-          <entry key="Blade" value="3808" />
+          <entry key="Blade" value="3894" />
           <entry key="JSON" value="2" />
-          <entry key="PHP" value="4543" />
+          <entry key="PHP" value="4802" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
@@ -80,8 +81,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/web.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="539">
+              <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="432">
+              <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -123,24 +133,15 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ProfileController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="528">
-              <caret line="42" column="47" lean-forward="true" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="61" column="57" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+            <state relative-caret-position="720">
+              <caret line="60" column="40" lean-forward="true" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -148,17 +149,32 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategorieenController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
+            <state relative-caret-position="288">
+              <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
+        <entry file="file://$PROJECT_DIR$/app/Notifications/EventSignedUpNotification.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" selection-start-line="15" selection-end-line="15" />
+            <state relative-caret-position="651">
+              <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+              <folding>
+                <element signature="e#37#58#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Notifications/CustomVerifyEmailNotification.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="405">
+              <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+              <folding>
+                <element signature="e#37#55#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,7 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/database/migrations/2019_04_17_081603_create_role_users_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_081251_create_permissions_table.php" />
         <option value="$PROJECT_DIR$/database/migrations/2019_04_17_081645_create_permission_roles_table.php" />
         <option value="$PROJECT_DIR$/app/Providers/AuthServiceProvider.php" />
@@ -213,15 +228,16 @@
         <option value="$PROJECT_DIR$/app/GoVadisEvent.php" />
         <option value="$PROJECT_DIR$/resources/views/events/index.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/events/event.blade.php" />
-        <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
         <option value="$PROJECT_DIR$/app/User.php" />
         <option value="$PROJECT_DIR$/app/Notifications/CustomVerifyEmailNotification.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/OrganizerController.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/CategorieenController.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
         <option value="$PROJECT_DIR$/database/seeds/UserSeeder.php" />
+        <option value="$PROJECT_DIR$/resources/views/auth/verify.blade.php" />
+        <option value="$PROJECT_DIR$/app/Notifications/EventSignedUpNotification.php" />
+        <option value="$PROJECT_DIR$/routes/web.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/EventsController.php" />
       </list>
     </option>
   </component>
@@ -547,7 +563,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="SearchEverywhereHistoryKey" value="verify.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/verify.blade.php&#10;web.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/routes/web.php&#10;eventcontrol&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;govadiseve&#9;null&#9;null&#10;events/events.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/events/events.blade.php&#10;eventscontroller&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;login.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/login.blade.php&#10;.env&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/.env&#10;app.b&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;app.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;registercon&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/Auth/RegisterController.php&#10;organiz&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/OrganizerController.php&#10;app.bla&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;profi&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/profile&#10;company.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Company.php&#10;user.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/User.php&#10;register&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;home.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/home.blade.php&#10;register.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;events&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;event&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;eventscon&#9;null&#9;null&#10;database&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/database/seeds/DatabaseSeeder.php&#10;authserv&#9;null&#9;null&#10;permission&#9;null&#9;null&#10;role.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Role.php" />
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Notifications/CustomVerifyEmailNotification.php&#10;verify.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/verify.blade.php&#10;web.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/routes/web.php&#10;eventcontrol&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;govadiseve&#9;null&#9;null&#10;events/events.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/events/events.blade.php&#10;eventscontroller&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;login.bl&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/login.blade.php&#10;.env&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/.env&#10;app.b&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;app.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;registercon&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/Auth/RegisterController.php&#10;organiz&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/OrganizerController.php&#10;app.bla&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/layouts/app.blade.php&#10;profi&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/profile&#10;company.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Company.php&#10;user.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/User.php&#10;register&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;home.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/home.blade.php&#10;register.blade&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/resources/views/auth/register.blade.php&#10;events&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;event&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Http/Controllers/EventsController.php&#10;eventscon&#9;null&#9;null&#10;database&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/database/seeds/DatabaseSeeder.php&#10;authserv&#9;null&#9;null&#10;permission&#9;null&#9;null&#10;role.php&#9;FILE&#9;file:///home/teunissenstefan/Homestead/htdocs/codefest-2019/Oplevering/app/Role.php" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -577,12 +593,12 @@
       <option name="presentableId" value="Default" />
       <updated>1555488042117</updated>
       <workItem from="1555488043233" duration="12840000" />
-      <workItem from="1555501112570" duration="38694000" />
+      <workItem from="1555501112570" duration="39854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51534000" />
+    <option name="totallyTimeSpent" value="52694000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="-8" width="1902" height="1044" extended-state="6" />
@@ -617,20 +633,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/PermissionRole.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="37" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Permission.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/profile/show.blade.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -866,27 +868,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" selection-start-line="15" selection-end-line="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Auth/Notifications/VerifyEmail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
           <caret line="13" column="4" lean-forward="true" selection-start-line="13" selection-start-column="4" selection-end-line="77" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Notifications/CustomVerifyEmailNotification.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="51" column="78" lean-forward="true" selection-start-line="51" selection-start-column="78" selection-end-line="51" selection-end-column="78" />
-          <folding>
-            <element signature="e#37#55#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -901,13 +886,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
           <caret line="26" column="11" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -927,13 +905,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategorieenController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="21" column="47" lean-forward="true" selection-start-line="21" selection-start-column="47" selection-end-line="21" selection-end-column="47" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/ParticipantController.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -972,17 +943,65 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/web.php">
+    <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="720">
+          <caret line="60" column="40" lean-forward="true" selection-start-line="60" selection-start-column="40" selection-end-line="60" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/UserSeeder.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/auth/verify.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="61" column="57" selection-start-line="61" selection-start-column="57" selection-end-line="61" selection-end-column="57" />
+        <state relative-caret-position="256">
+          <caret line="16" column="113" selection-start-line="16" selection-start-column="113" selection-end-line="16" selection-end-column="113" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/CategorieenController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="27" column="17" lean-forward="true" selection-start-line="27" selection-start-column="17" selection-end-line="27" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Notifications/CustomVerifyEmailNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="52" column="5" lean-forward="true" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+          <folding>
+            <element signature="e#37#55#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2019_04_17_113029_create_go_vadis_events_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="29" column="33" lean-forward="true" selection-start-line="29" selection-start-column="33" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Notifications/EventSignedUpNotification.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="651">
+          <caret line="46" column="55" selection-start-line="46" selection-start-column="55" selection-end-line="46" selection-end-column="55" />
+          <folding>
+            <element signature="e#37#58#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/web.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="60" column="65" selection-start-line="60" selection-start-column="65" selection-end-line="60" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EventsController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="107" column="9" selection-start-line="107" selection-start-column="9" selection-end-line="107" selection-end-column="9" />
         </state>
       </provider>
     </entry>

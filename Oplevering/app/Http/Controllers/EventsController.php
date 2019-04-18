@@ -106,6 +106,7 @@ class EventsController extends Controller
         if (! $event->participating_users->contains(Auth::user())) {
             $event->participating_users()->attach(Auth::user());
         }
+        Auth::user()->notify(new \App\Notifications\EventSignedUpNotification($event));
         $request->session()->flash('status', 'Aangemeld!');
         return redirect(route('event', ["event"=>$event->id]));
     }

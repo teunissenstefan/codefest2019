@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    Voordat je er nog een aanvraag, kijk in je inbox of je er al een hebt. ALs je er geen hebt gekregen, <a href="{{ route('verification.resend') }}">klik hier om er nog een aan te vragen</a>.
+                    Voordat je een e-mail aanvraagt, kijk of er al een in je inbox staat. Als je er nog geen hebt, <a href="{{ route('verification.resend') }}">klik hier om er nog een aan te vragen</a>.
                 </div>
             </div>
         </div>
